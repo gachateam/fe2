@@ -38,4 +38,8 @@ export const HeaderTopLeft = styled.p`
 
 export const HeaderTopBorder = styled.div`
     border-bottom: 1px solid #ebebeb;
+
+    @media screen and (max-width: 991px){
+        display:none;
+    }
 `

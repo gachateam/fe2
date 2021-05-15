@@ -23,6 +23,16 @@ const CustomMenu = React.forwardRef(({ children, style, className, 'aria-labelle
     // eslint-disable-next-line
     const [value, setValue] = useState('');
 
+    //custom animation
+    // const show = className.split(' ')[1] == 'show';
+
+    // const styleCustom = {
+    //     ...style,
+    //     top: '10%',
+    //     transformStyle: 'preserve-3d',
+    //     transform: (show?'rotateX(0deg)':'rotateX(-90deg)')+"translateY(50%)"
+    // }
+    
     return (
         <HeaderBoxDropdown
             ref={ref}
@@ -170,6 +180,7 @@ export class MyAccount extends React.Component {
     }
 }
 
+//custom animation
 export class DropdownAnimation extends React.Component {
     constructor() {
         super();
@@ -179,7 +190,7 @@ export class DropdownAnimation extends React.Component {
         }
         this.Language = {
             language: ["English", "Francis"],
-            image: ["../../img/imgLanguage/1.jpg", "../../img/imgLanguage/2.jpg"]
+            image: ["../../img/imgLanguage/1.jpg","../../img/imgLanguage/2.jpg"]
         }
     }
 
@@ -200,7 +211,6 @@ export class DropdownAnimation extends React.Component {
 
                 <Dropdown.Menu
                     as={CustomMenu}
-                    show={true}
                 >
                     {this.Language.language.map((data, index) => (
                         <Dropdown.Item

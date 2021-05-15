@@ -20,7 +20,6 @@ export const HeaderBoxDropdown = styled.ul`
     z-index: 99;
     margin: 10px 0;
     display: block;
-    transform: translate(40px);
     transition: all .5s;
     overflow:hidden;
 `

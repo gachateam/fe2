@@ -9,12 +9,12 @@ const Header = () => {
         <HeaderTopBorder>
             <Container>
                 <Row>
-                    <Col xs={12} lg={4}>
+                    <Col lg={4}>
                         <HeaderTopLeft>
                             <span>Customer Service: </span> (800) 123 456 789
                     </HeaderTopLeft>
                     </Col>
-                    <Col xs={12} lg={8}>
+                    <Col lg={8}>
                         <HeaderTopRightBox>
                             <HeaderTopRight>
                                 <HeaderTopRightItem className="settings">
@@ -27,7 +27,7 @@ const Header = () => {
                                     <Language />
                                 </HeaderTopRightItem>
                                 <HeaderTopRightItem className="settings">
-                                    <DropdownAnimation />
+                                    <MyAccount />
                                 </HeaderTopRightItem>
                             </HeaderTopRight>
                         </HeaderTopRightBox>
