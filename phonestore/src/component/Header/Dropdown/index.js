@@ -10,7 +10,6 @@ const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
             e.preventDefault();
             onClick(e);
         }}
-        style={{ zIndex: 10 }}
     >
         {children}
         <HeaderAngleDown />

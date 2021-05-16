@@ -37,3 +37,26 @@ ul {
 .dropdown {
   perspective: 1500px;
 }
+
+.sticky-top .logo-small{
+  height: 35px;
+}
+
+.anim-down{
+  animation: anim-down .2s linear;
+}
+
+@keyframes anim-down {
+  0%{
+    top: -50px;
+    opacity: 0;
+  }
+  100%{
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.position-unset{
+  position: unset;
+}

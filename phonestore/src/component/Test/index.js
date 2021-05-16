@@ -1,26 +1,13 @@
-// import React from "react";
-// import ReactDOM from "react-dom";
-// import { useSpring, animated } from "react-spring";
+import React from 'react'
 
-// import "./styles.css";
+const Test = () => {
+    return (
+        <div>
+            test
+        </div>
+    )
+}
 
-// export default Animatio = () => {
-//   const [{ y, color }, set] = useSpring(() => ({ y: 100, color: "#fff" }));
-//   return (
-//     <div className="App">
-//       <button
-//         onMouseEnter={() => set({ y: 0, color: "#000" })}
-//         onMouseLeave={() => set({ y: 100, color: "#fff" })}
-//       >
-//         <animated.span style={{ color }}>
-//           react-spring is way easy
-//         </animated.span>
-//         <animated.div
-//           style={{ transform: y.interpolate(v => `translateY(${v}%`) }}
-//           className="glance"
-//         />
-//       </button>
-//     </div>
-//   );
-// }
+export default Test
+
 

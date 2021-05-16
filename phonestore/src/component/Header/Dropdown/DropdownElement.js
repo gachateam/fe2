@@ -17,7 +17,7 @@ export const HeaderBoxDropdown = styled.ul`
     position: absolute;
     top: 100%;
     width: 110px;
-    z-index: 99;
+    z-index: 1200;
     margin: 10px 0;
     display: block;
     transition: all .5s;

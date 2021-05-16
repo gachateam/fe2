@@ -43,3 +43,7 @@ export const HeaderTopBorder = styled.div`
         display:none;
     }
 `
+
+// export const HeaderNavbarLogo = styled.img`
+
+// `
