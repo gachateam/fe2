@@ -1,8 +1,23 @@
 import React from 'react'
 // eslint-disable-next-line
-import { HeaderTopBorder, HeaderTopLeft, HeaderTopRight, HeaderTopRightBox, HeaderTopRightItem, HeaderTopRightLink } from './HeaderElement'
-import { Container, Row, Col } from 'react-bootstrap'
-import { USD, Language, MyAccount, DropdownAnimation } from './Dropdown';
+import {
+    HeaderTopBorder,
+    HeaderTopLeft,
+    HeaderTopRight,
+    HeaderTopRightBox,
+    HeaderTopRightItem,
+    HeaderTopRightLink
+} from './HeaderElement'
+import {
+    Container,
+    Row,
+    Col
+} from 'react-bootstrap'
+import {
+    USD,
+    Language,
+    MyAccount
+} from './Dropdown';
 
 const Header = () => {
     return (
@@ -12,7 +27,7 @@ const Header = () => {
                     <Col lg={4}>
                         <HeaderTopLeft>
                             <span>Customer Service: </span> (800) 123 456 789
-                    </HeaderTopLeft>
+                        </HeaderTopLeft>
                     </Col>
                     <Col lg={8}>
                         <HeaderTopRightBox>

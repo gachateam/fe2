@@ -43,15 +43,11 @@ const CustomMenu = React.forwardRef(({ children, style, className, 'aria-labelle
             {React.Children.toArray(children).filter(
                 (child) => !value || child.props.children.toLowerCase().startsWith(value),
             )}
-
         </HeaderBoxDropdown>
     );
 });
 
 const CustomItem = React.forwardRef(({ children, onClick }, ref) => {
-    // eslint-disable-next-line
-    const [value, setValue] = useState('');
-
     return (
         <li>
             <HeaderBoxDropdownLink
