@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { FaAngleDown } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 export const ImageLanguage = styled.img`
     margin-right: 5px;
@@ -24,7 +25,7 @@ export const HeaderBoxDropdown = styled.ul`
     overflow:hidden;
 `
 
-export const HeaderBoxDropdownLink = styled.a`
+export const HeaderBoxDropdownLink = styled(Link)`
     display: block;
     padding: 3px 10px;
     font-size: 12px;
@@ -33,6 +34,7 @@ export const HeaderBoxDropdownLink = styled.a`
     transition: 0.3s;
     display:flex;
     align-items:center;
+    text-decoration:none;
 
     &:hover{
         text-decoration: none;

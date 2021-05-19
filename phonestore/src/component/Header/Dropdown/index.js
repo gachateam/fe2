@@ -21,16 +21,6 @@ const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
 const CustomMenu = React.forwardRef(({ children, style, className, 'aria-labelledby': labeledBy }, ref) => {
     // eslint-disable-next-line
     const [value, setValue] = useState('');
-
-    //custom animation
-    // const show = className.split(' ')[1] == 'show';
-
-    // const styleCustom = {
-    //     ...style,
-    //     top: '10%',
-    //     transformStyle: 'preserve-3d',
-    //     transform: (show?'rotateX(0deg)':'rotateX(-90deg)')+"translateY(50%)"
-    // }
     
     return (
         <HeaderBoxDropdown
@@ -46,11 +36,11 @@ const CustomMenu = React.forwardRef(({ children, style, className, 'aria-labelle
     );
 });
 
-const CustomItem = React.forwardRef(({ children, onClick }, ref) => {
+const CustomItem = React.forwardRef(({ children, onClick,to }, ref) => {
     return (
         <li>
             <HeaderBoxDropdownLink
-                href="#"
+                to={to}
                 ref={ref}
                 onClick={(e) => {
                     e.preventDefault();
@@ -91,6 +81,7 @@ export class Language extends React.Component {
                 <Dropdown.Menu as={CustomMenu}>
                     {this.Language.language.map((data, index) => (
                         <Dropdown.Item
+                            to="/tien"
                             key={index}
                             as={CustomItem}
                             eventKey="1"
@@ -117,7 +108,6 @@ export class USD extends React.Component {
             myUsd: ["USD $", "EUR €"]
         }
     }
-
     changeValue(text) {
         this.setState({ dropDownValue: text })
     }

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-// import { NavLink as Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 // import { FaBars } from 'react-icons/fa'
 
 export const HeaderTopRightItem = styled.li`
@@ -15,12 +15,13 @@ export const HeaderTopRightBox = styled.div`
     height:100%;
 `
 
-export const HeaderTopRightLink = styled.a`
+export const HeaderTopRightLink = styled(Link)`
     padding: 10px 15px;
     color: inherit;
     transition: 0.3s;
     display:flex;
     align-items:center;
+    text-decoration: none;
 
     &:hover{
         text-decoration: none;
@@ -43,7 +44,3 @@ export const HeaderTopBorder = styled.div`
         display:none;
     }
 `
-
-// export const HeaderNavbarLogo = styled.img`
-
-// `
