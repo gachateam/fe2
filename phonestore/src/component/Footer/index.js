@@ -1,7 +1,9 @@
 import React from 'react'
 // eslint-disable-next-line
 import { Container, Row, Col } from 'react-bootstrap'
-import { FooterClass, FooterBottom, FooterLogo, FooterTop, Address, WidgetBox, WidgetSingleBox, WidgetSingleBoxUl, NewsLetter, NewsLetterInner, NewsLetterEmailBox, NewsLetterBtn, NewsLetterForm } from './FooterElement'
+import { FaHeart, FaFacebookSquare, FaTwitterSquare, FaGooglePlusSquare, FaLinkedin, FaEnvelopeOpen } from 'react-icons/fa'
+import { ImYoutube2 } from 'react-icons/im'
+import { FooterClass, FooterBottom, FooterLogo, FooterTop, Address, WidgetBox, WidgetSingleBox, WidgetSingleBoxUl, NewsLetter, NewsLetterInner, NewsLetterEmailBox, NewsLetterBtn, NewsLetterForm, FooterSocial, WidgetsContainerh6, WCLineHeight, FooterMenuA, WidgetSingleBoxA, SignTitle, NewsLetterTitle } from './FooterElement'
 
 
 const Footer = () => {
@@ -12,11 +14,11 @@ const Footer = () => {
                     <Row>
                         <Col lg={6}>
                             <NewsLetterInner>
-                                <i class="fa fa-envelope-open-o"></i>
-                                <div class="newsletter-title">
-                                    <h1 class="sign-title">Sign Up For Our Newsletter</h1>
+                                <FaEnvelopeOpen color="white" size="3.8rem"/>
+                                <NewsLetterTitle>
+                                    <SignTitle>Sign Up For Our Newsletter</SignTitle>
                                     <p>Get e-mail updates about our latest shop and special offers.</p>
-                                </div>
+                                    </NewsLetterTitle>
                             </NewsLetterInner>
                         </Col>
                         <Col lg={6}>
@@ -41,64 +43,64 @@ const Footer = () => {
                                 <p><strong>Number Phone:</strong> (800) 123 456 - (800) 123 456.</p>
                                 <p><strong>Address Email:</strong> support@circleshop.com</p>
                             </Address>
-                            {/* <ul class="d-flex">
-                                    <li><a class="facebook" href="#"><i class="zmdi zmdi-facebook"></i></a></li>
-                                    <li><a class="twitter" href="#"><i class="zmdi zmdi-twitter"></i></a></li>
-                                    <li><a class="youtube" href="#"><i class="zmdi zmdi-youtube"></i></a></li>
-                                    <li><a class="google" href="#"><i class="zmdi zmdi-google-plus"></i></a></li>
-                                    <li><a class="linkedin" href="#"><i class="zmdi zmdi-linkedin"></i></a></li>
-                                </ul> */}
+                            <ul className="d-flex">
+                                <li><FooterSocial><FaFacebookSquare color="#448ccb" size="2.5rem" /></FooterSocial></li>
+                                <li><FooterSocial><FaTwitterSquare color="#00bff3" size="2.5rem" /></FooterSocial></li>
+                                <li><FooterSocial><ImYoutube2 color="#d02d2d" size="2.5rem" /></FooterSocial></li>
+                                <li><FooterSocial><FaGooglePlusSquare color="#f85858" size="2.5rem" /></FooterSocial></li>
+                                <li><FooterSocial><FaLinkedin color="#555555" size="2.5rem" /></FooterSocial></li>
+                            </ul>
                         </Col>
                         <Col lg={8}>
                             <Row>
                                 <Col lg={3} md={3}>
                                     <div class="widgets_container">
-                                        <h6>Information</h6>
+                                        <WidgetsContainerh6>Information</WidgetsContainerh6>
                                         <div class="footer_menu">
                                             <ul>
-                                                <li><a href="about.html">About Us</a></li>
-                                                <li><a href="contact.html"> Contact us</a></li>
-                                                <li><a href="#"> Privecy Policy</a></li>
-                                                <li><a href="#">Terms & Conditions</a></li>
+                                                <WCLineHeight><FooterMenuA href="about.html">About Us</FooterMenuA></WCLineHeight>
+                                                <WCLineHeight><FooterMenuA href="contact.html">Contact us</FooterMenuA></WCLineHeight>
+                                                <WCLineHeight><FooterMenuA href="#">Privecy Policy</FooterMenuA></WCLineHeight>
+                                                <WCLineHeight><FooterMenuA href="#">Terms & Conditions</FooterMenuA></WCLineHeight>
                                             </ul>
                                         </div>
                                     </div>
                                 </Col>
                                 <Col lg={3} md={3}>
                                     <div class="widgets_container">
-                                        <h6>My Account</h6>
+                                        <WidgetsContainerh6>My Account</WidgetsContainerh6>
                                         <div class="footer_menu">
                                             <ul>
-                                                <li><a href="#">My Account</a></li>
-                                                <li><a href="#">Older History</a></li>
-                                                <li><a href="#">Wishlist</a></li>
-                                                <li><a href="#">Newslatter</a></li>
+                                                <WCLineHeight><FooterMenuA href="#">My Account</FooterMenuA></WCLineHeight>
+                                                <WCLineHeight><FooterMenuA href="#">Older History</FooterMenuA></WCLineHeight>
+                                                <WCLineHeight><FooterMenuA href="#">Wishlist</FooterMenuA></WCLineHeight>
+                                                <WCLineHeight><FooterMenuA href="#">Newslatter</FooterMenuA></WCLineHeight>
                                             </ul>
                                         </div>
                                     </div>
                                 </Col>
                                 <Col lg={3} md={3}>
                                     <div class="widgets_container">
-                                        <h6>Find It Fast</h6>
+                                        <WidgetsContainerh6>Find It Fast</WidgetsContainerh6>
                                         <div class="footer_menu">
                                             <ul>
-                                                <li><a href="#">Desktop</a></li>
-                                                <li><a href="#">Laptop & Mobile</a></li>
-                                                <li><a href="#">Components</a></li>
-                                                <li><a href="#">Terms & Conditions</a></li>
+                                                <WCLineHeight><FooterMenuA href="#">Desktop</FooterMenuA></WCLineHeight>
+                                                <WCLineHeight><FooterMenuA href="#">Laptop & Mobile</FooterMenuA></WCLineHeight>
+                                                <WCLineHeight><FooterMenuA href="#">Terms & Conditions</FooterMenuA></WCLineHeight>
+                                                <WCLineHeight><FooterMenuA href="#">Components</FooterMenuA></WCLineHeight>
                                             </ul>
                                         </div>
                                     </div>
                                 </Col>
                                 <Col lg={3} md={3}>
                                     <div class="widgets_container">
-                                        <h6>Customer Service</h6>
+                                        <WidgetsContainerh6>Customer Service</WidgetsContainerh6>
                                         <div class="footer_menu">
                                             <ul>
-                                                <li><a href="#">Sitemap</a></li>
-                                                <li><a href="#">My Account</a></li>
-                                                <li><a href="#">Contact Us</a></li>
-                                                <li><a href="#">Delivery Information</a></li>
+                                                <WCLineHeight><FooterMenuA href="#">Sitemap</FooterMenuA></WCLineHeight>
+                                                <WCLineHeight><FooterMenuA href="#">My Account</FooterMenuA></WCLineHeight>
+                                                <WCLineHeight><FooterMenuA href="#">Contact Us</FooterMenuA></WCLineHeight>
+                                                <WCLineHeight><FooterMenuA href="#">Delivery Information</FooterMenuA></WCLineHeight>
                                             </ul>
                                         </div>
                                     </div>
@@ -110,45 +112,45 @@ const Footer = () => {
                                         <WidgetSingleBox>
                                             <p><strong>Address:</strong></p>
                                             <WidgetSingleBoxUl>
-                                                <li><a href="#">Order</a></li>
-                                                <li><a href="#">Affiliate</a></li>
-                                                <li><a href="#">Marketing</a></li>
-                                                <li><a href="#">Sourcing</a></li>
-                                                <li><a href="#">Gadgets</a></li>
-                                                <li><a href="#">Accessories</a></li>
+                                                <li><WidgetSingleBoxA href="#">Order</WidgetSingleBoxA></li>
+                                                <li><WidgetSingleBoxA href="#">Affiliate</WidgetSingleBoxA></li>
+                                                <li><WidgetSingleBoxA href="#">Marketing</WidgetSingleBoxA></li>
+                                                <li><WidgetSingleBoxA href="#">Sourcing</WidgetSingleBoxA></li>
+                                                <li><WidgetSingleBoxA href="#">Gadgets</WidgetSingleBoxA></li>
+                                                <li><WidgetSingleBoxA href="#">Accessories</WidgetSingleBoxA></li>
                                             </WidgetSingleBoxUl>
                                         </WidgetSingleBox>
                                         <WidgetSingleBox>
                                             <p><strong>Headphones:</strong></p>
                                             <WidgetSingleBoxUl>
-                                                <li><a href="#">Beats</a></li>
-                                                <li><a href="#">Headphone Bose</a></li>
-                                                <li><a href="#">Headphone Nocx</a></li>
-                                                <li><a href="#">Wireless</a></li>
-                                                <li><a href="#">Headphone</a></li>
-                                                <li><a href="#">Headphone Mini</a></li>
+                                                <li><WidgetSingleBoxA href="#">Beats</WidgetSingleBoxA></li>
+                                                <li><WidgetSingleBoxA href="#">Headphone Bose</WidgetSingleBoxA></li>
+                                                <li><WidgetSingleBoxA href="#">Headphone Nocx</WidgetSingleBoxA></li>
+                                                <li><WidgetSingleBoxA href="#">Wireless</WidgetSingleBoxA></li>
+                                                <li><WidgetSingleBoxA href="#">Headphone</WidgetSingleBoxA></li>
+                                                <li><WidgetSingleBoxA href="#">Headphone Mini</WidgetSingleBoxA></li>
                                             </WidgetSingleBoxUl>
                                         </WidgetSingleBox>
                                         <WidgetSingleBox>
                                             <p><strong>Computers:</strong></p>
                                             <WidgetSingleBoxUl>
-                                                <li><a href="#">Mini Laptops</a></li>
-                                                <li><a href="#">Computers</a></li>
-                                                <li><a href="#">Laptop Mouse</a></li>
-                                                <li><a href="#">Laptop Pad</a></li>
-                                                <li><a href="#">GB Laptop</a></li>
-                                                <li><a href="#">XL Laptop</a></li>
+                                                <li><WidgetSingleBoxA href="#">Mini Laptops</WidgetSingleBoxA></li>
+                                                <li><WidgetSingleBoxA href="#">Computers</WidgetSingleBoxA></li>
+                                                <li><WidgetSingleBoxA href="#">Laptop Mouse</WidgetSingleBoxA></li>
+                                                <li><WidgetSingleBoxA href="#">Laptop Pad</WidgetSingleBoxA></li>
+                                                <li><WidgetSingleBoxA href="#">GB Laptop</WidgetSingleBoxA></li>
+                                                <li><WidgetSingleBoxA href="#">XL Laptop</WidgetSingleBoxA></li>
                                             </WidgetSingleBoxUl>
                                         </WidgetSingleBox>
                                         <WidgetSingleBox>
                                             <p><strong>Camera:</strong></p>
                                             <WidgetSingleBoxUl>
-                                                <li><a href="#">Lense Camera</a></li>
-                                                <li><a href="#">Frame Camera</a></li>
-                                                <li><a href="#">Box Camera</a></li>
-                                                <li><a href="#">Mini Camera</a></li>
-                                                <li><a href="#">XL Camera</a></li>
-                                                <li><a href="#">Point shoot camera</a></li>
+                                                <li><WidgetSingleBoxA href="#">Lense Camera</WidgetSingleBoxA></li>
+                                                <li><WidgetSingleBoxA href="#">Frame Camera</WidgetSingleBoxA></li>
+                                                <li><WidgetSingleBoxA href="#">Box Camera</WidgetSingleBoxA></li>
+                                                <li><WidgetSingleBoxA href="#">Mini Camera</WidgetSingleBoxA></li>
+                                                <li><WidgetSingleBoxA href="#">XL Camera</WidgetSingleBoxA></li>
+                                                <li><WidgetSingleBoxA href="#">Po</WidgetSingleBoxA></li>
                                             </WidgetSingleBoxUl>
                                         </WidgetSingleBox>
                                     </WidgetBox>
@@ -162,7 +164,7 @@ const Footer = () => {
                 <Container>
                     <Row>
                         <Col md={12} lg={5}>
-                            <p>© 2021 Copyright <strong>CIRCLESHOP</strong> Made With <i class="fa fa-heart text-danger"></i> by <a href="https://hasthemes.com/"> <strong>HasThemes</strong></a></p>
+                            <p>© 2021 Copyright <strong>CIRCLESHOP</strong> Made With <FaHeart color='red' /> by <a href="https://hasthemes.com/"> <strong>HasThemes</strong></a></p>
                         </Col>
                         <Col md={12} lg={7}>
                             <img src="./footerend.png" alt="" class="img-fluid" />
