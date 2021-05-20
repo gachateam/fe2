@@ -57,3 +57,21 @@ export const HeaderCustomOption = styled.li`
     -o-transition: all 0.2s;
     transition: all 0.2s;
 `
+
+export const SearchBox = styled.div`
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    height:44px;
+`
+
+export const HeaderSearch = styled.input`
+    flex-grow: 10;
+`
+
+export const HeaderSearchButton = styled.button`
+    flex-grow: 1;
+`
+
+export const Test = styled.div`
+`

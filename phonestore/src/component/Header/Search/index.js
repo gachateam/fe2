@@ -8,7 +8,10 @@ import {
     HeaderCategoryIcon,
     HeaderCategoryToggle,
     HeaderCustomOption,
-    HeaderMenuStyle
+    HeaderMenuStyle,
+    HeaderSearch,
+    HeaderSearchButton,
+    SearchBox
 } from './SearchElement'
 // eslint-disable-next-line
 import { Link } from 'react-router-dom'
@@ -32,7 +35,7 @@ export const DropdownCategory = () => {
                 <div className="search-container">
                     <form action="#" className="form-search">
                         <div className="top-cat">
-                            <select classNames="select-option" name="select" id="category2" style={{ display: "none" }}>
+                            <select className="select-option" name="select" id="category2" style={{ display: "none" }}>
                                 <option value="1">All categories</option>
                                 <option value="12">All categories</option>
                                 <option value="27">- - Women </option>
@@ -97,7 +100,7 @@ export const DropdownCategory = () => {
                                 <option value="24">Automotive </option>
                                 <option value="25">cosmetic</option>
                             </select>
-                            <div className="nice-select select-option open" tabindex="0">
+                            <div className="nice-select select-option open" tabIndex="0">
                                 <div className="current-select">
                                     <span className="current">All categories</span>
                                 </div>
@@ -114,10 +117,10 @@ export const DropdownCategory = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div class="search_box">
-                            <input class="header-search" placeholder="Enter your search key ..." type="text" />
-                            <button class="header-search-button" type="submit">Search</button>
-                        </div>
+                        <SearchBox className="search_box">
+                            <HeaderSearch className="header-search" placeholder="Enter your search key ..." type="text" />
+                            <HeaderSearchButton className="header-search-button" type="submit">Search</HeaderSearchButton>
+                        </SearchBox>
                     </form>
                 </div>
             </div>

@@ -3,8 +3,9 @@ import { Dropdown } from 'react-bootstrap';
 import { HeaderTopRightLink } from '../HeaderElement'
 import { ImageLanguage, HeaderAngleDown, HeaderBoxDropdown, HeaderBoxDropdownLink } from './DropdownElement';
 
-const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
+const CustomToggle = React.forwardRef(({ children, onClick, to }, ref) => (
     <HeaderTopRightLink
+        to={to}
         ref={ref}
         onClick={(e) => {
             e.preventDefault();
@@ -21,7 +22,7 @@ const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
 const CustomMenu = React.forwardRef(({ children, style, className, 'aria-labelledby': labeledBy }, ref) => {
     // eslint-disable-next-line
     const [value, setValue] = useState('');
-    
+
     return (
         <HeaderBoxDropdown
             ref={ref}
@@ -36,7 +37,7 @@ const CustomMenu = React.forwardRef(({ children, style, className, 'aria-labelle
     );
 });
 
-const CustomItem = React.forwardRef(({ children, onClick,to }, ref) => {
+const CustomItem = React.forwardRef(({ children, onClick, to }, ref) => {
     return (
         <li>
             <HeaderBoxDropdownLink
@@ -50,6 +51,16 @@ const CustomItem = React.forwardRef(({ children, onClick,to }, ref) => {
                 {children}
             </HeaderBoxDropdownLink>
         </li>
+    );
+});
+
+const CustomDropdown = React.forwardRef(({ children }, ref) => {
+    return (
+        <Dropdown
+            style={{ zIndex: 1 }}
+        >
+            {children}
+        </Dropdown>
     );
 });
 
@@ -72,8 +83,12 @@ export class Language extends React.Component {
 
     render() {
         return (
-            <Dropdown>
-                <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components" >
+            <Dropdown as={CustomDropdown}>
+                <Dropdown.Toggle
+                    to="/"
+                    as={CustomToggle}
+                    id="dropdown-custom-components"
+                >
                     <ImageLanguage src="../../img/imgLanguage/1.jpg" />
                     <span>{this.state.dropDownValue}</span>
                 </Dropdown.Toggle>
@@ -113,14 +128,19 @@ export class USD extends React.Component {
     }
     render() {
         return (
-            <Dropdown>
-                <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
+            <Dropdown as={CustomDropdown}>
+                <Dropdown.Toggle
+                    to="/"
+                    as={CustomToggle}
+                    id="dropdown-custom-components"
+                >
                     <span>{this.state.dropDownValue}</span>
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu as={CustomMenu}>
                     {this.usd.myUsd.map((data, index) => (
                         <Dropdown.Item
+                            to="/tien"
                             as={CustomItem}
                             key={index}
                             eventKey={index.toString()}
@@ -141,8 +161,12 @@ export class MyAccount extends React.Component {
     }
     render() {
         return (
-            <Dropdown>
-                <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
+            <Dropdown as={CustomDropdown}>
+                <Dropdown.Toggle
+                    to="/"
+                    as={CustomToggle}
+                    id="dropdown-custom-components"
+                >
                     <span>My Account</span>
                 </Dropdown.Toggle>
 
@@ -150,6 +174,7 @@ export class MyAccount extends React.Component {
                     {
                         this.setting.setting.map((data, index) => (
                             <Dropdown.Item
+                                to="/tien"
                                 key={index}
                                 as={CustomItem}
                                 title={data}
@@ -175,7 +200,7 @@ export class DropdownAnimation extends React.Component {
         }
         this.Language = {
             language: ["English", "Francis"],
-            image: ["../../img/imgLanguage/1.jpg","../../img/imgLanguage/2.jpg"]
+            image: ["../../img/imgLanguage/1.jpg", "../../img/imgLanguage/2.jpg"]
         }
     }
 
@@ -187,6 +212,7 @@ export class DropdownAnimation extends React.Component {
         return (
             <Dropdown>
                 <Dropdown.Toggle
+                    to="/"
                     as={CustomToggle}
                     id="dropdown-custom-components"
                 >
@@ -199,6 +225,7 @@ export class DropdownAnimation extends React.Component {
                 >
                     {this.Language.language.map((data, index) => (
                         <Dropdown.Item
+                            to="/tien"
                             key={index}
                             as={CustomItem}
                             eventKey="1"

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { HeaderBoxDropdownLink } from '../Dropdown/DropdownElement'
 
 
@@ -99,6 +99,7 @@ export const BlockCardSpanCount = styled(BlockcardSpan)`
 export const BlockcardDropdown = styled.div`
     position: absolute;
     display: block;
+    padding: 20px;
     -webkit-box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 10%);
     box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 10%);
     border-radius: 5px;
@@ -107,7 +108,7 @@ export const BlockcardDropdown = styled.div`
     background: #FFFFFF;
     transition: all 1s;
     z-index: 999;    
-    transform: ${props => props.show ? 'translateX(-50%)' : 'translateX(300%)'};
+    transform: ${props => props.show ? 'translateX(0%)' : 'translateX(300%)'};
 `
 
 export const BlockcardList = styled.ul`
@@ -182,4 +183,50 @@ export const BlockcardInnerCartContentPrice = styled(BlockcardSpan)`
 `
 
 export const BlockcardInnerCartContentSize = styled(BlockcardSpan)`
+    color: #000;
+`
+
+export const BlockCardPrice = styled.li`
+    display: block;
+    overflow: hidden;
+`
+
+export const BlockCardSubtotalText = styled(BlockcardSpan)`
+    float: left;
+    font-weight: 700;
+    color: #232323;
+    font-size: 14px;
+    text-transform: uppercase;
+`
+
+export const BlockCardSubtotalPrice = styled(BlockcardSpan)`
+    float: right;
+    font-weight: 900;
+    color: #e12e2e;
+    font-size: 14px;
+`
+
+export const BlockCardCheckOutCart = styled.div`
+    margin: 0 -20px -20px -20px;
+    padding: 35px 20px;
+    background: #408ed4;
+    text-align: center;
+    border-radius: 0 0 5px 5px;
+`
+
+export const BlockCardCheckOutCartLink = styled(Link)`
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 12px;
+    color: #333333;
+    padding: 12px 30px;
+    border-radius: 5px;
+    background: #FFFFFF;
+    transition: all .2s;
+    text-decoration: none;
+
+    &:hover{
+        background: #3d3d3d;
+        color: #FFFFFF;
+    }
 `
