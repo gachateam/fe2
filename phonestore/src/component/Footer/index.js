@@ -23,7 +23,7 @@ const Footer = () => {
                         </Col>
                         <Col lg={6}>
                             <NewsLetterForm>
-                                <NewsLetterEmailBox></NewsLetterEmailBox>
+                                <NewsLetterEmailBox placeholder="Enter your email"></NewsLetterEmailBox>
                                 <NewsLetterBtn>Subscribe</NewsLetterBtn>
                             </NewsLetterForm>
                         </Col>
