@@ -63,14 +63,37 @@ export const SearchBox = styled.div`
     width: 100%;
     align-items: stretch;
     height:44px;
+    position: relative;
 `
 
 export const HeaderSearch = styled.input`
-    flex-grow: 10;
+    flex-grow: 5;
+    width: 70%;
+    height: 44px;
+    padding-right: 10px;
+    padding-left: 18px;
+    border: 0px;
+    outline: 0px;
 `
 
 export const HeaderSearchButton = styled.button`
     flex-grow: 1;
+    height: 44px;
+    line-height: 30px;
+    border: 2px solid #FFFFFF;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 27px;
+    border-radius: 0px 25px 25px 0px;
+    transition: all 300ms ease-in;
+    background: #408ed4;
+
+    &:hover{
+        background: #333333;
+        color: #FFFFFF;
+    }
 `
 
 export const Test = styled.div`

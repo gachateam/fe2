@@ -26,6 +26,7 @@ import {
     HeaderMiddleList,
     HearderMiddleItem
 } from './NavbarElement'
+import './index.css'
 
 const CustomToggle = React.forwardRef(({ children, onClick, className }, ref) => {
     return (
@@ -75,7 +76,7 @@ const CustomNavbar = React.forwardRef(({ children, className }, ref) => {
 
     return (
         <Navbar
-            className={scroll ? className + " anim-down" : className.split(' sticky-top')[0] + " position-unset"}
+            className={scroll ? className.split(' py-5').join('') + " anim-down" : className.split(' sticky-top').join('') + " position-unset"}
             ref={ref}
         >
             {children}
@@ -122,7 +123,7 @@ export class NavbarCustom extends React.Component {
         <HeaderMiddleList className="list-100">
             {
                 this.category.map((e) => (
-                    <HearderMiddleItem key={e} className="flex-fill">
+                    <HearderMiddleItem key={e}>
                         <HeaderMiddleLink to="/">
                             {e}
                         </HeaderMiddleLink>
@@ -214,7 +215,7 @@ export class NavbarCustom extends React.Component {
 
     render() {
         return (
-            <Navbar as={CustomNavbar} bg="light" expand="lg" sticky='top' className="shadow bg-white rounded">
+            <Navbar as={CustomNavbar} bg="light" expand="lg" sticky='top' className="shadow bg-white roundedb py-5">
                 <Container>
                     <Navbar.Brand to="/">
                         <img src="../../img/logo/pos-circle-logo.jpg" className="img-fluid logo-small" alt="logo" />

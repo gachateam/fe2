@@ -1,0 +1,26 @@
+.sticky-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1020;
+}
+
+.sticky-top .list-100 {
+  width: 100%;
+}
+
+.anim-down {
+  animation: anim-down 0.2s linear;
+}
+
+@keyframes anim-down {
+  0% {
+    top: -50px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}

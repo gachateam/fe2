@@ -28,6 +28,7 @@ export const HeaderMiddleList = styled.ul`
     align-items: center;
     height:40px;
     width: 80%;
+    justify-content: space-evenly;
     
     @media screen and (max-width: 991px){
         display: none;

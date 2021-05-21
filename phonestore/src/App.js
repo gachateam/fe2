@@ -26,8 +26,7 @@ export default function App() {
             test1
           </h1>
         </Route>
-        
-      </Route>
+    </Route>
 
     </BrowserRouter>
   )
