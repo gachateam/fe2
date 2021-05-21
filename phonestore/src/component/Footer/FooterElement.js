@@ -92,6 +92,7 @@ color: #3d3d3d;
     padding-left: 5px;
     text-decoration: none;
     color: #408ed4;
+    transition: 0.3s;
 }
 `
 
@@ -114,4 +115,12 @@ export const SignTitle = styled.h1`
 font-size: 30px;
 color: #FFFFFF;
 margin-bottom: 10px;
+`
+
+export const HasThemes = styled.a`
+color: #3d3d3d;
+&:hover{
+    text-decoration: none;
+    color: #408ed4;
+}
 `
