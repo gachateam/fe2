@@ -16,7 +16,29 @@ import {
 // eslint-disable-next-line
 import { Link } from 'react-router-dom'
 
+//set onclick category toggle
+const ShowList = () => {
+    let toggle = document.querySelector('.select-option.nice-select')
+    if (toggle.classList.toggle('open')) {
+        document.addEventListener('click', clickDocument, true)
+    } else {
+        document.removeEventListener('click', clickDocument, true)
+    }
+}
+
+const clickDocument = (e) => {
+    let toggle = document.querySelector('.select-option.nice-select')
+    let current = document.querySelector('.current')
+    let topCat = document.querySelector('.top-cat')
+    let currentSelect = document.querySelector('.current-select')
+
+    if (toggle.classList.contains('open') && ![current, topCat, currentSelect].includes(e.target)) {
+        toggle.classList.remove('open')
+    }
+}
+
 export const DropdownCategory = () => {
+
     return (
         <HeaderMenu>
             <div className="col-md-3">
@@ -34,7 +56,7 @@ export const DropdownCategory = () => {
             <div className="col-md-9">
                 <div className="search-container">
                     <form action="#" className="form-search">
-                        <div className="top-cat">
+                        <div className="top-cat" onClick={ShowList}>
                             <select className="select-option" name="select" id="category2" style={{ display: "none" }}>
                                 <option value="1">All categories</option>
                                 <option value="12">All categories</option>
@@ -100,19 +122,32 @@ export const DropdownCategory = () => {
                                 <option value="24">Automotive </option>
                                 <option value="25">cosmetic</option>
                             </select>
-                            <div className="nice-select select-option open" tabIndex="0">
+                            <div className="nice-select select-option" tabIndex="0">
                                 <div className="current-select">
-                                    <span className="current">All categories</span>
+                                    <span className="current" style={{ color: '#666', cursor: 'pointer' }}>All categories</span>
                                 </div>
                                 <ul className="list">
                                     <HeaderCustomOption data-value="1" className="option selected focus">All categories</HeaderCustomOption>
-                                    <HeaderCustomOption data-value="12" className="option">All categories</HeaderCustomOption>
+                                    <HeaderCustomOption data-value="12" className="option">All categoriestesstetse etsest</HeaderCustomOption>
                                     <HeaderCustomOption data-value="27" className="option">- - Women </HeaderCustomOption>
                                     <HeaderCustomOption data-value="30" className="option">- - - - Dresses</HeaderCustomOption>
                                     <HeaderCustomOption data-value="31" className="option">- - - - Shirts &amp; Blouses</HeaderCustomOption>
                                     <HeaderCustomOption data-value="32" className="option">- - - - Blazers</HeaderCustomOption>
                                     <HeaderCustomOption data-value="33" className="option">- - - - Lingerie</HeaderCustomOption>
                                     <HeaderCustomOption data-value="34" className="option">- - - - Jeans</HeaderCustomOption>
+                                    <HeaderCustomOption data-value="28" className="option">- - Men</HeaderCustomOption>
+                                    <HeaderCustomOption data-value="28" className="option">- - Men</HeaderCustomOption>
+                                    <HeaderCustomOption data-value="28" className="option">- - Men</HeaderCustomOption>
+                                    <HeaderCustomOption data-value="28" className="option">- - Men</HeaderCustomOption>
+                                    <HeaderCustomOption data-value="28" className="option">- - Men</HeaderCustomOption>
+                                    <HeaderCustomOption data-value="28" className="option">- - Men</HeaderCustomOption>
+                                    <HeaderCustomOption data-value="28" className="option">- - Men</HeaderCustomOption>
+                                    <HeaderCustomOption data-value="28" className="option">- - Men</HeaderCustomOption>
+                                    <HeaderCustomOption data-value="28" className="option">- - Men</HeaderCustomOption>
+                                    <HeaderCustomOption data-value="28" className="option">- - Men</HeaderCustomOption>
+                                    <HeaderCustomOption data-value="28" className="option">- - Men</HeaderCustomOption>
+                                    <HeaderCustomOption data-value="28" className="option">- - Men</HeaderCustomOption>
+                                    <HeaderCustomOption data-value="28" className="option">- - Men</HeaderCustomOption>
                                     <HeaderCustomOption data-value="28" className="option">- - Men</HeaderCustomOption>
                                 </ul>
                             </div>

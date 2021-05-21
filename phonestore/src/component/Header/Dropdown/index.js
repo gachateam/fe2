@@ -57,7 +57,7 @@ const CustomItem = React.forwardRef(({ children, onClick, to }, ref) => {
 const CustomDropdown = React.forwardRef(({ children }, ref) => {
     return (
         <Dropdown
-            style={{ zIndex: 1 }}
+            style={{ zIndex: 11 }}
         >
             {children}
         </Dropdown>
