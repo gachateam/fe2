@@ -1,14 +1,40 @@
 import React from 'react'
 // eslint-disable-next-line
 import { Container, Row, Col } from 'react-bootstrap'
-import { FaHeart, FaFacebookSquare, FaTwitterSquare, FaGooglePlusSquare, FaLinkedin, FaEnvelopeOpen } from 'react-icons/fa'
+import { FaHeart, FaFacebookF, FaTwitter, FaGooglePlusG, FaLinkedinIn, FaRegEnvelopeOpen} from 'react-icons/fa'
 import { ImYoutube2 } from 'react-icons/im'
-import { FooterClass, FooterBottom, FooterLogo, FooterTop, Address, WidgetBox, WidgetSingleBox, WidgetSingleBoxUl, NewsLetter, NewsLetterInner, NewsLetterEmailBox, NewsLetterBtn, NewsLetterForm, FooterSocial, WidgetsContainerh6, WCLineHeight, FooterMenuA, WidgetSingleBoxA, SignTitle, NewsLetterTitle, HasThemes } from './FooterElement'
-import FooterWGSingleBoxDB from './FooterWGSingleBoxDB'
+import { 
+    FooterClass, 
+    FooterBottom, 
+    FooterLogo, 
+    FooterTop, 
+    Address, 
+    NewsLetter, 
+    NewsLetterInner, 
+    NewsLetterEmailBox, 
+    NewsLetterBtn, 
+    NewsLetterForm, 
+    FooterSocial, 
+    WidgetsContainerh6, 
+    WCLineHeight, 
+    FooterMenuA, 
+    WidgetSingleBoxA, 
+    SignTitle, 
+    NewsLetterTitle, 
+    HasThemes,
+    FooterSocialFaceB,
+    FooterSocialTwt,
+    FooterSocialYt,
+    FooterSocialGPlus,
+    FooterSocialLink
+} from './FooterElement'
 import FooterMenuDB from './FooterMenuDB'
+import WidgetBosClass from './Database'
 
 
 const Footer = () => {
+
+
     return (
         <FooterClass>
             <NewsLetter>
@@ -16,7 +42,7 @@ const Footer = () => {
                     <Row style={{ alignItems: "center" }}>
                         <Col lg={6}>
                             <NewsLetterInner>
-                                <FaEnvelopeOpen color="white" size="3.8rem" />
+                                <FaRegEnvelopeOpen color="white" size="3.8rem" />
                                 <NewsLetterTitle>
                                     <SignTitle>Sign Up For Our Newsletter</SignTitle>
                                     <p style={{ color: "#ffffff" }}>Get e-mail updates about our latest shop and special offers.</p>
@@ -46,11 +72,11 @@ const Footer = () => {
                                 <p><strong>Address Email:</strong> support@circleshop.com</p>
                             </Address>
                             <ul className="d-flex">
-                                <li><FooterSocial><FaFacebookSquare color="#448ccb" size="2.5rem" /></FooterSocial></li>
-                                <li><FooterSocial><FaTwitterSquare color="#00bff3" size="2.5rem" /></FooterSocial></li>
-                                <li><FooterSocial><ImYoutube2 color="#d02d2d" size="2.5rem" /></FooterSocial></li>
-                                <li><FooterSocial><FaGooglePlusSquare color="#f85858" size="2.5rem" /></FooterSocial></li>
-                                <li><FooterSocial><FaLinkedin color="#555555" size="2.5rem" /></FooterSocial></li>
+                                <li><FooterSocialFaceB style={{height: '40px', width: '40px'}}><FaFacebookF color="#ffffff" size="1.5rem"/></FooterSocialFaceB></li>
+                                <li><FooterSocialTwt style={{height: '40px', width: '40px'}}><FaTwitter color="#ffffff" size="1.5rem"/></FooterSocialTwt></li>
+                                <li><FooterSocialYt style={{height: '40px', width: '40px'}}><ImYoutube2 color="#ffffff" size="1.5rem"/></FooterSocialYt></li>
+                                <li><FooterSocialGPlus style={{height: '40px', width: '40px'}}><FaGooglePlusG color="#ffffff" size="1.5rem"/></FooterSocialGPlus></li>
+                                <li><FooterSocialLink style={{height: '40px', width: '40px'}}><FaLinkedinIn color="#ffffff" size="1.5rem"/></FooterSocialLink></li>
                             </ul>
                         </Col>
                         <Col lg={8}>
@@ -60,10 +86,10 @@ const Footer = () => {
                                         <WidgetsContainerh6>Information</WidgetsContainerh6>
                                         <div className="footer_menu">
                                             <ul>
-                                                <WCLineHeight><FooterMenuA href="about.html">About Us</FooterMenuA></WCLineHeight>
-                                                <WCLineHeight><FooterMenuA href="contact.html">Contact us</FooterMenuA></WCLineHeight>
-                                                <WCLineHeight><FooterMenuA href="#">Privecy Policy</FooterMenuA></WCLineHeight>
-                                                <WCLineHeight><FooterMenuA href="#">Terms & Conditions</FooterMenuA></WCLineHeight>
+                                                <WCLineHeight><FooterMenuA to="about.html">About Us</FooterMenuA></WCLineHeight>
+                                                <WCLineHeight><FooterMenuA to="contact.html">Contact us</FooterMenuA></WCLineHeight>
+                                                <WCLineHeight><FooterMenuA to="#">Privecy Policy</FooterMenuA></WCLineHeight>
+                                                <WCLineHeight><FooterMenuA to="#">Terms & Conditions</FooterMenuA></WCLineHeight>
                                             </ul>
                                         </div>
                                     </div>
@@ -73,9 +99,9 @@ const Footer = () => {
                                         <WidgetsContainerh6>My Account</WidgetsContainerh6>
                                         <div className="footer_menu">
                                             <ul>
-                                                {FooterMenuDB.map(m => {
+                                                {FooterMenuDB.map((m,i) => {
                                                     return (
-                                                        <WCLineHeight><FooterMenuA href="#">{m.myaccount}</FooterMenuA></WCLineHeight>
+                                                        <WCLineHeight key={i}><FooterMenuA to="#">{m.myaccount}</FooterMenuA></WCLineHeight>
                                                     )
                                                 })}
                                             </ul>
@@ -87,9 +113,9 @@ const Footer = () => {
                                         <WidgetsContainerh6>Find It Fast</WidgetsContainerh6>
                                         <div className="footer_menu">
                                             <ul>
-                                                {FooterMenuDB.map(m => {
+                                                {FooterMenuDB.map((m,i) => {
                                                     return (
-                                                        <WCLineHeight><FooterMenuA href="#">{m.finditfast}</FooterMenuA></WCLineHeight>
+                                                        <WCLineHeight key={i}><FooterMenuA to="#">{m.finditfast}</FooterMenuA></WCLineHeight>
                                                     )
                                                 })}
                                             </ul>
@@ -101,9 +127,9 @@ const Footer = () => {
                                         <WidgetsContainerh6>Customer Service</WidgetsContainerh6>
                                         <div className="footer_menu">
                                             <ul>
-                                                {FooterMenuDB.map(m => {
+                                                {FooterMenuDB.map((m,i) => {
                                                     return (
-                                                        <WCLineHeight><FooterMenuA href="#">{m.customservice}</FooterMenuA></WCLineHeight>
+                                                        <WCLineHeight key={i}><FooterMenuA to="#">{m.customservice}</FooterMenuA></WCLineHeight>
                                                     )
                                                 })}
                                             </ul>
@@ -113,48 +139,7 @@ const Footer = () => {
                             </Row>
                             <Row>
                                 <Col lg={12}>
-                                    <WidgetBox>
-                                        <WidgetSingleBox>
-                                            <p><strong>Address:</strong></p>
-                                            <WidgetSingleBoxUl>
-                                                {FooterWGSingleBoxDB.map(d => {
-                                                    return (
-                                                        <li><WidgetSingleBoxA href="#">{d.address}</WidgetSingleBoxA></li>
-                                                    )
-                                                })}
-                                            </WidgetSingleBoxUl>
-                                        </WidgetSingleBox>
-                                        <WidgetSingleBox>
-                                            <p><strong>Headphones:</strong></p>
-                                            <WidgetSingleBoxUl>
-                                                {FooterWGSingleBoxDB.map(d => {
-                                                    return (
-                                                        <li><WidgetSingleBoxA href="#">{d.headphone}</WidgetSingleBoxA></li>
-                                                    )
-                                                })}
-                                            </WidgetSingleBoxUl>
-                                        </WidgetSingleBox>
-                                        <WidgetSingleBox>
-                                            <p><strong>Computers:</strong></p>
-                                            <WidgetSingleBoxUl>
-                                                {FooterWGSingleBoxDB.map(d => {
-                                                    return (
-                                                        <li><WidgetSingleBoxA href="#">{d.computers}</WidgetSingleBoxA></li>
-                                                    )
-                                                })}
-                                            </WidgetSingleBoxUl>
-                                        </WidgetSingleBox>
-                                        <WidgetSingleBox>
-                                            <p><strong>Camera:</strong></p>
-                                            <WidgetSingleBoxUl>
-                                                {FooterWGSingleBoxDB.map(d => {
-                                                    return (
-                                                        <li><WidgetSingleBoxA href="#">{d.camera}</WidgetSingleBoxA></li>
-                                                    )
-                                                })}
-                                            </WidgetSingleBoxUl>
-                                        </WidgetSingleBox>
-                                    </WidgetBox>
+                                    <WidgetBosClass />
                                 </Col>
                             </Row>
                         </Col>
@@ -165,7 +150,7 @@ const Footer = () => {
                 <Container>
                     <Row>
                         <Col md={12} lg={5}>
-                            <p>© 2021 Copyright <strong>CIRCLESHOP</strong> Made With <FaHeart color='red' /> by <HasThemes href="https://hasthemes.com/"><strong>HasThemes</strong></HasThemes></p>
+                            <p>© 2021 Copyright <strong>CIRCLESHOP</strong> Made With <FaHeart color='red' /> by <HasThemes to="https://hasthemes.com/"><strong>HasThemes</strong></HasThemes></p>
                         </Col>
                         <Col md={12} lg={7}>
                             <img src="./footerend.png" alt="" className="img-fluid" />
