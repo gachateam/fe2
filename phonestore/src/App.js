@@ -3,6 +3,7 @@ import Header from './component/Header';
 // import { Test, Test2 } from './component/Test';
 // eslint-disable-next-line
 import { Route, Router, BrowserRouter, Switch, Link } from 'react-router-dom';
+import Footer from './component/Footer';
 import React from 'react';
 
 export default function App() {
@@ -26,7 +27,8 @@ export default function App() {
             test1
           </h1>
         </Route>
-    </Route>
+        <Footer />
+      </Route>
 
     </BrowserRouter>
   )
