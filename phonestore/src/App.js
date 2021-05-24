@@ -1,9 +1,9 @@
 // import logo from '../public/img/1.png';
 import Header from './component/Header';
+import Footer from './component/Footer';
 // import { Test, Test2 } from './component/Test';
 // eslint-disable-next-line
 import { Route, Router, BrowserRouter, Switch, Link } from 'react-router-dom';
-import Footer from './component/Footer';
 import React from 'react';
 
 export default function App() {
@@ -11,7 +11,8 @@ export default function App() {
     <BrowserRouter>
       <Route>
         <Header />
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <Footer />
+        {/* <div style={{ display: 'flex', justifyContent: 'center' }}>
           <h1><Link to="/test">test</Link></h1>
         </div>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -26,8 +27,8 @@ export default function App() {
           <h1 style={{ display: 'flex', justifyContent: 'center', backgroundColor: 'red' }}>
             test1
           </h1>
-        </Route>
-        <Footer />
+        </Route> */}
+
       </Route>
 
     </BrowserRouter>

@@ -1,11 +1,17 @@
 import React from 'react'
-import { WidgetBox, WidgetSingleBox, WidgetSingleBoxUl, WidgetSingleBoxA, WidgetSingleBoxE } from '../FooterElement'
+import {
+    WidgetBox,
+    WidgetSingleBox,
+    WidgetSingleBoxUl,
+    WidgetSingleBoxA,
+    WidgetSingleBoxE
+} from '../FooterElement'
 
 class WidgetBoxClass extends React.Component {
     constructor() {
         super();
 
-        this.data = {
+        this.state = {
             wsb: [
                 {
                     title: "Address",
@@ -26,19 +32,19 @@ class WidgetBoxClass extends React.Component {
             ]
         }
     }
-    WidgetSingleBoxItem = (data) => <WidgetSingleBoxE><WidgetSingleBoxA to="#">{data.children}</WidgetSingleBoxA></WidgetSingleBoxE>
+
     WidgetSingleBoxList = (data) => (
         <WidgetSingleBoxUl>
             {data.list.map((value, index) => (
-                <this.WidgetSingleBoxItem key={index}>{value}</this.WidgetSingleBoxItem>
+                <WidgetSingleBoxE key={index}><WidgetSingleBoxA to="/">{value}</WidgetSingleBoxA></WidgetSingleBoxE>
             ))}
         </WidgetSingleBoxUl>
     )
-    render() {
 
+    render() {
         return (
             <WidgetBox>
-                {this.data.wsb.map((text, index) => (
+                {this.state.wsb.map((text, index) => (
                     <WidgetSingleBox key={index}>
                         <p><strong>{text.title}</strong></p>
                         <this.WidgetSingleBoxList list={text.addr} />
