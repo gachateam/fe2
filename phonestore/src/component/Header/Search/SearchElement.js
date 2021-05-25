@@ -15,6 +15,16 @@ export const HeaderCategoryToggle = styled.div`
     padding: 10px 20px;
     overflow: hidden;
     justify-content: space-between;
+
+    
+
+    @media screen and (max-width: 991px){
+        width: 270px;
+    }
+
+    @media screen and (max-width: 479px){
+        width: 174px;
+    }
 `
 
 export const HeaderCategoryesLink = styled(Link)`
@@ -29,6 +39,10 @@ export const HeaderCategoryesLink = styled(Link)`
     &:hover{
         cursor: pointer;
         color: #FFFFFF;
+    }
+
+    @media screen and (max-width: 479px){
+        font-size: 14px;
     }
 `
 
@@ -96,5 +110,30 @@ export const HeaderSearchButton = styled.button`
     }
 `
 
-export const Test = styled.div`
+export const CategoryMenus = styled.nav`
+    width: 306px;
+    background: #FFFFFF;
+    border-radius: 0 0 10px 10px;
+    border: 2px solid #176ab4;
+    border-top: none;
+    padding: 0;
+    position: absolute;
+    z-index: 9;
+
+    @media screen and (max-width: 991px){
+        width: 270px;
+    }
+
+    @media screen and (max-width: 479px){
+        width: 174px;
+    }
+    @media screen and (min-width: 991px){
+        width: 216px;
+    }
+    @media screen and (min-width: 1200px){
+        width: 261px;
+    }
+    @media screen and (min-width: 1400px){
+        width: 306px;
+    }
 `

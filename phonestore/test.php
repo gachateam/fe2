@@ -1,4 +1,4 @@
 <?php
-foreach ($list as $value) {
+foreach ($list as $key => $value) {
     //code
 }

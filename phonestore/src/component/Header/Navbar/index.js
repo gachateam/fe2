@@ -115,10 +115,6 @@ export class NavbarCustom extends React.Component {
         }
     }
 
-    onClick = (e) => {
-        this.setState({ show: !this.state.show })
-    }
-
     List = () => (
         <HeaderMiddleList className="list-100">
             {
