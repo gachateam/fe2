@@ -115,10 +115,6 @@ export class NavbarCustom extends React.Component {
         }
     }
 
-    onClick = (e) => {
-        this.setState({ show: !this.state.show })
-    }
-
     List = () => (
         <HeaderMiddleList className="list-100">
             {
@@ -202,7 +198,7 @@ export class NavbarCustom extends React.Component {
 
         return (
             <Blockcard>
-                <Dropdown style={{ position: 'relative', zIndex: 10 }}>
+                <Dropdown style={{ position: 'relative', zIndex: 9 }}>
                     <Toggle />
 
                     <DropdownMenu />

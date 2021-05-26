@@ -19,6 +19,7 @@ import {
 } from './Dropdown';
 import { NavbarCustom } from './Navbar'
 import { DropdownCategory } from './Search'
+import Offcanvas from './offcanvas'
 
 const Header = () => {
     return (
@@ -55,6 +56,7 @@ const Header = () => {
                 </HeaderTopBorder>
                 <NavbarCustom />
                 <DropdownCategory />
+                <Offcanvas />
             </div>
             <div>
                 texttexttexttexttexttexttexttexttexttexttexttexttexttext

@@ -109,7 +109,11 @@ export const BlockcardDropdown = styled.div`
     background: #FFFFFF;
     transition: all 1s;
     z-index: 999;    
-    transform: ${props => props.show ? 'translateX(0%)' : 'translateX(300%)'};
+    transform: ${props => props.show ? 'translateX(0%)' : 'translateY(300%)'};
+
+    @media screen and (max-width: 991px){
+        width: 250%;
+    }
 `
 
 export const BlockcardList = styled.ul`

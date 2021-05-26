@@ -6,6 +6,7 @@ import Footer from './component/Footer';
 import { Route, Router, BrowserRouter, Switch, Link } from 'react-router-dom';
 import React from 'react';
 
+
 export default function App() {
   return (
     <BrowserRouter>
