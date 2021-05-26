@@ -4,16 +4,18 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import 'bootstrap/js/dist/offcanvas'
 import { Link } from 'react-router-dom'
 import { BiEnvelope } from 'react-icons/bi'
-import { FaHeart, FaFacebookF, FaTwitter, FaGooglePlusG, FaLinkedinIn, FaRegEnvelopeOpen } from 'react-icons/fa'
+import { FaFacebookF, FaTwitter, FaGooglePlusG, FaLinkedinIn } from 'react-icons/fa'
+import { FooterSocialFaceB, FooterSocialGPlus, FooterSocialLink, FooterSocialTwt, FooterSocialYt } from '../../Footer/FooterElement'
 import {
     USD,
     Language
 } from '../Dropdown';
+import { ImYoutube2 } from 'react-icons/im'
 
 const Offcanvas = () => {
     return (
         <OffcanvasStyle className="canvas-open">
-            <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                 <GiHamburgerMenu />
             </button>
 
@@ -53,30 +55,30 @@ const Offcanvas = () => {
                         </form>
                     </div>
 
-                    <div class="offcanvas_menu_cover text-left">
-                        <ul class="offcanvas_main_menu">
-                            <li class="menu-item-has-children active"><span class="menu-expand"><i class="fa fa-angle-down"></i></span>
+                    <div className="offcanvas_menu_cover text-left">
+                        <ul className="offcanvas_main_menu">
+                            <li className="menu-item-has-children active"><span className="menu-expand"><i className="fa fa-angle-down"></i></span>
                                 <Link to="/">Home</Link>
                             </li>
-                            <li class="menu-item-has-children"><span class="menu-expand"><i class="fa fa-angle-down"></i></span>
+                            <li className="menu-item-has-children"><span className="menu-expand"><i className="fa fa-angle-down"></i></span>
                                 <Link to="/">Shop</Link>
                             </li>
-                            <li class="menu-item-has-children"><span class="menu-expand"><i class="fa fa-angle-down"></i></span>
+                            <li className="menu-item-has-children"><span className="menu-expand"><i className="fa fa-angle-down"></i></span>
                                 <Link to="/">blog</Link>
                             </li>
-                            <li class="menu-item-has-children">
+                            <li className="menu-item-has-children">
                                 <Link to="/">about Us</Link>
                             </li>
-                            <li class="menu-item-has-children">
+                            <li className="menu-item-has-children">
                                 <Link to="/"> Contact Us</Link>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="offcanvas_footer">
-                        <span><a href="#"><BiEnvelope /> info@yourdomain.com</a></span>
-                        <div class="footer_social">
-                            <ul className="d-flex">
+                    <div className="offcanvas_footer">
+                        <span><Link to="/"><BiEnvelope /> info@yourdomain.com</Link></span>
+                        <div className="footer_social">
+                            <ul className="d-flex align-item-center justify-content-center">
                                 <li><FooterSocialFaceB to="/" style={{ height: '40px', width: '40px' }}><FaFacebookF color="#ffffff" size="1.5rem" /></FooterSocialFaceB></li>
                                 <li><FooterSocialTwt to="/" style={{ height: '40px', width: '40px' }}><FaTwitter color="#ffffff" size="1.5rem" /></FooterSocialTwt></li>
                                 <li><FooterSocialYt to="/" style={{ height: '40px', width: '40px' }}><ImYoutube2 color="#ffffff" size="1.5rem" /></FooterSocialYt></li>

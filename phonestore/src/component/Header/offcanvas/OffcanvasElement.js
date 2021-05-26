@@ -79,4 +79,8 @@ export const OffcanvasStyle = styled.div`
         font-size: 18px;
         color: #FFFFFF;
     }
+
+    @media screen and (min-width: 991px){
+        display: none;
+    }
 `
