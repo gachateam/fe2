@@ -9,7 +9,13 @@ body {
   color: #3d3d3d;
   background-color: #ffffff;
 }
-
+a {
+  line-height: inherit;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
 p {
   display: block;
   margin-block-start: 1em;
@@ -17,7 +23,9 @@ p {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
-
+a, button, img, input, span {
+  transition: 0.3s;
+}
 p:last-child {
   margin-bottom: 0;
 }
@@ -60,8 +68,6 @@ ul {
 .sticky-top .hidden-dropdown {
   display: none;
 }
-
-
 
 .position-unset {
   position: unset;
@@ -149,12 +155,12 @@ ul {
   width: 5px;
 }
 
-.nice-select.open::before{
+.nice-select.open::before {
   transform: rotate(-135deg);
 }
 
-@media screen and (max-width: 991px){
-  .form-search{
+@media screen and (max-width: 991px) {
+  .form-search {
     display: none;
   }
 }

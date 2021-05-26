@@ -4,7 +4,12 @@ import React, { useState } from 'react'
 import { Container, Dropdown, Navbar } from 'react-bootstrap';
 // import { FaBars } from 'react-icons/fa'
 import {
+    CategoryHoverRight,
+    CategoryHoverRightCatSubmenu,
     CategoryMenus,
+    CatHasChildren,
+    CatMegaTitle,
+    CatSubmenu,
     HeaderCategoryesLink,
     HeaderCategoryIcon,
     HeaderCategoryToggle,
@@ -16,6 +21,9 @@ import {
 } from './SearchElement'
 // eslint-disable-next-line
 import { Link } from 'react-router-dom'
+import { FaAngleRight, FaAngleDown } from 'react-icons/fa'
+import './index.css'
+import $ from 'jquery';
 
 //set onclick category toggle
 const ShowList = () => {
@@ -43,7 +51,8 @@ export class DropdownCategory extends React.Component {
         super()
 
         this.state = {
-            selected: "All categories"
+            selected: "All categories",
+            openMenu: false
         }
         this.option = [
             { dataValue: 1, value: 'All categories' },
@@ -54,6 +63,47 @@ export class DropdownCategory extends React.Component {
             { dataValue: 6, value: 'All categories5' },
             { dataValue: 7, value: 'All categories6' },
         ]
+        this.categoryHoverRight = {
+            category: [
+                {
+                    title: 'test',
+                    catMegaTitle: [
+                        {
+                            title: 'Security Cameras',
+                            list: ['DSLR Cameras', 'Lense Camera', 'Digital Cameras', 'Mirrorless Cameras', 'Point']
+                        },
+                        {
+                            title: 'Security Cameras',
+                            list: ['DSLR Cameras', 'Lense Camera', 'Digital Cameras', 'Mirrorless Cameras', 'Point']
+                        },
+                        {
+                            title: 'Security Cameras',
+                            list: ['DSLR Cameras', 'Lense Camera', 'Digital Cameras', 'Mirrorless Cameras', 'Point']
+                        }
+                    ]
+                },
+                {
+                    title: 'test',
+                    catMegaTitle: [
+                        {
+                            title: 'Security Cameras',
+                            list: ['DSLR Cameras', 'Lense Camera', 'Digital Cameras', 'Mirrorless Cameras', 'Point']
+                        },
+                        {
+                            title: 'Security Cameras',
+                            list: ['DSLR Cameras', 'Lense Camera', 'Digital Cameras', 'Mirrorless Cameras', 'Point']
+                        },
+                        {
+                            title: 'Security Cameras',
+                            list: ['DSLR Cameras', 'Lense Camera', 'Digital Cameras', 'Mirrorless Cameras', 'Point']
+                        }
+                    ]
+                }
+            ]
+        }
+        this.category = [
+            'test', 'test', 'test'
+        ]
     }
 
     setSelectedText(e) {
@@ -61,24 +111,100 @@ export class DropdownCategory extends React.Component {
         document.querySelector('.select-option.nice-select').classList.toggle('open')
     }
 
+    handleClick = (e) => {
+        let btn = document.querySelector('.categoryes-menu-btn')
+        if (btn.contains(e.target)) {
+            this.setState({ openMenu: !this.state.openMenu })
+            if (this.state.openMenu) {
+                $('.categorye-menus').slideUp();
+            } else {
+                $('.categorye-menus').slideDown();
+            }
+        }
+    }
+
+    CategorySubmenu = (data) => {
+        const CategoryTitle = (data) => <Link to="/">{data.children}<FaAngleRight /></Link>
+
+        const CatMegaTitleItem = (data) => <li><Link to="/">{data.children}</Link></li>
+
+        const CatMegaTitleList = (data) => <ul>{data.list.map((data, index) => <CatMegaTitleItem key={index}>{data}</CatMegaTitleItem>)}</ul>
+
+        return (
+            <CategoryHoverRightCatSubmenu>
+                <CategoryTitle>{data.list.title}</CategoryTitle>
+                <CatSubmenu>
+                    {
+                        data.list.catMegaTitle.map((data, index) => (
+                            <CatMegaTitle key={index}>
+                                <Link to="/">{data.title}</Link>
+                                <CatMegaTitleList list={data.list} />
+                            </CatMegaTitle>
+                        ))
+                    }
+                </CatSubmenu>
+            </CategoryHoverRightCatSubmenu>
+        )
+    }
+
+    CategoryHasChildren = (data) => {
+        const CategoryHasChildrenItem = (data) => <li><Link to="/">{data.children}</Link></li>
+
+        const CategoryHasChildrenList = (data) => <ul className="sub-menu" style={{ display: 'none' }}>{data.value.map((data, index) => <CategoryHasChildrenItem key={index}>{data}</CategoryHasChildrenItem>)}</ul>
+
+        const clickCatHasChildren = (e) => {
+            $(e.target.nextSibling).slideToggle()
+            e.target.previousSibling.classList.toggle('rotate')
+        }
+
+        return (
+            <CatHasChildren>
+                <span className="menu-expand">
+                    <FaAngleDown />
+                </span>
+                <Link to="/" onClick={clickCatHasChildren}>{data.value.title}</Link>
+                <ul className="sub-menu" style={{ display: 'none' }}>
+                    {
+                        data.value.catMegaTitle.map((data, index) => (
+                            <CatHasChildren key={index}>
+                                <span className="menu-expand"><FaAngleDown /></span>
+
+                                <Link to="/" onClick={clickCatHasChildren}>{data.title}</Link>
+
+                                <CategoryHasChildrenList value={data.list} />
+                            </CatHasChildren>
+                        ))
+                    }
+                </ul>
+            </CatHasChildren>
+        )
+    }
+
     render() {
         return (
             <HeaderMenu>
                 <div className="col-md-3">
                     <div className="categoryes-menu-bar">
-                        <HeaderCategoryToggle className="categoryes-menu-btn category-toggle d-flex align-items-center">
-                            <div>
-                                <HeaderCategoryesLink to="/">All Categories</HeaderCategoryesLink>
-                            </div>
-                            <div>
-                                <HeaderCategoryIcon />
-                            </div>
+                        <HeaderCategoryToggle className="categoryes-menu-btn category-toggle d-flex align-items-center" onClick={this.handleClick}>
+
+                            <div><HeaderCategoryesLink to="/">All Categories</HeaderCategoryesLink></div>
+
+                            <div><HeaderCategoryIcon /></div>
+
                         </HeaderCategoryToggle>
+
                         <CategoryMenus className="categorye-menus category-dropdown">
-                            test
+                            <ul>
+                                {this.categoryHoverRight.category.map((data, index) => <this.CategorySubmenu key={index} list={data} />)}
+
+                                {this.categoryHoverRight.category.map((data, index) => <this.CategoryHasChildren key={index} value={data} />)}
+
+                                {this.category.map((data, index) => <CategoryHoverRight key={index}><Link to="/">{data}</Link></CategoryHoverRight>)}
+                            </ul>
                         </CategoryMenus>
                     </div>
                 </div>
+
                 <div className="col-md-9">
                     <div className="search-container">
                         <form action="#" className="form-search">

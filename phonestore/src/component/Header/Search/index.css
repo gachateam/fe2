@@ -1,0 +1,13 @@
+@keyframes anim-down1 {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 500px;
+  }
+}
+
+.test {
+  animation: anim-down1 2s forwards;
+}
+

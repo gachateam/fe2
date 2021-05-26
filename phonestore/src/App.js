@@ -5,6 +5,7 @@ import Header from './component/Header';
 import { Route, Router, BrowserRouter, Switch, Link } from 'react-router-dom';
 import React from 'react';
 
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -26,7 +27,7 @@ export default function App() {
             test1
           </h1>
         </Route>
-    </Route>
+      </Route>
 
     </BrowserRouter>
   )
