@@ -1,0 +1,86 @@
+{
+    "category": [
+        {
+            "category": "Động vật"
+        },
+        {
+            "category": "Cây cối"
+        }
+    ],
+    "ques": [
+        {
+            "category": 0,
+            "ques": "đây là câu hỏi",
+            "ans": [
+                "câu trả lời 1",
+                "câu trả lời 2",
+                "câu trả lời 3",
+                "câu trả lời 4"
+            ],
+            "ansc": 3,
+            "type": 2
+        },
+        {
+            "category": 0,
+            "ques": "đây là câu hỏi",
+            "ans": [
+                "câu trả lời 1",
+                "câu trả lời 2",
+                "câu trả lời 3",
+                "câu trả lời 4"
+            ],
+            "ansc": 3,
+            "type": 1
+        },
+        {
+            "category": 0,
+            "ques": "đây là câu hỏi",
+            "ans": [
+                "câu trả lời 1",
+                "câu trả lời 2",
+                "câu trả lời 3",
+                "câu trả lời 4"
+            ],
+            "ansc": 3,
+            "type": 1
+        }
+    ],
+    "unit": [
+        {
+            "name": "dong vat",
+            "description": "tien",
+            "ques": [
+                1,
+                3,
+                4
+            ]
+        },
+        {
+            "name": "dong vat",
+            "description": "tien",
+            "ques": [
+                1,
+                3,
+                4
+            ]
+        },
+        {
+            "name": "dong vat",
+            "description": "tien",
+            "ques": [
+                1,
+                3,
+                4
+            ]
+        },
+        {
+            "name": "dong vat",
+            "description": "tien",
+            "ques": [
+                1,
+                3,
+                4
+            ]
+        }
+    ]
+}
