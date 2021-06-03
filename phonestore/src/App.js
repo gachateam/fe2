@@ -1,10 +1,14 @@
 // import logo from '../public/img/1.png';
 import Header from './component/Header';
 import Footer from './component/Footer';
+import Home1 from './component/Home1';
 // import { Test, Test2 } from './component/Test';
 // eslint-disable-next-line
 import { Route, Router, BrowserRouter, Switch, Link } from 'react-router-dom';
 import React from 'react';
+import 'slick-carousel/slick/slick'
+import CustomSlick from './component/CustomSlick';
+// import Home1 from './component/home1';
 
 
 export default function App() {
@@ -12,6 +16,8 @@ export default function App() {
     <BrowserRouter>
       <Route>
         <Header />
+        <CustomSlick/>
+        <Home1/>
         <Footer />
         {/* <div style={{ display: 'flex', justifyContent: 'center' }}>
           <h1><Link to="/test">test</Link></h1>
