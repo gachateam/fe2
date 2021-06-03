@@ -6,7 +6,6 @@ import Home1 from './component/Home1';
 // eslint-disable-next-line
 import { Route, Router, BrowserRouter, Switch, Link } from 'react-router-dom';
 import React from 'react';
-import 'slick-carousel/slick/slick'
 import CustomSlick from './component/CustomSlick';
 // import Home1 from './component/home1';
 
