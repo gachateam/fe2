@@ -53,7 +53,7 @@ const MyFooterBottom = () => (
                     <p>© 2021 Copyright <strong>CIRCLESHOP</strong> Made With <FaHeart color='red' /> by <HasThemes to="https://hasthemes.com/"><strong>HasThemes</strong></HasThemes></p>
                 </Col>
                 <Col md={12} lg={7}>
-                    <img src="./footerend.png" alt="" className="img-fluid" />
+                    <img src="./footerend.png" alt="hinh1" className="img-fluid" />
                 </Col>
             </Row>
         </Container>

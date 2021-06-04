@@ -1,9 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import Slider from "react-slick";
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
 import CustomSlick from '../CustomSlick';
+import {SliderSectionCSS} from './SliderSectionElement'
 
 const SliderSection = () => {
     var settings = {
@@ -11,18 +9,19 @@ const SliderSection = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        arrows: false
     };
     return (
-        <div className="slider_section">
+        <SliderSectionCSS className="slider_section">
             <Container>
                 <Row>
                     <Col md={12} lg={9}>
                         <CustomSlick settings={settings}>
                             <div>
                                 <div className="single_slider slick-slide">
-                                    <img src="./slider4-1.png" alt="" className="img-fluid" />
-                                    <div class="slider_content color_two">
+                                    <img src="./img/slider/slider4-1.png" alt="hinh1" className="img-fluid" />
+                                    <div className="slider_content color_two">
                                         <h5>The Xbox One S <br /> Trend</h5>
                                         <h2>Weeky <br /> Deals! Outlet</h2>
                                         <div className="pt-des">
@@ -34,7 +33,7 @@ const SliderSection = () => {
                             </div>
                             <div>
                                 <div className="single_slider slick-slide">
-                                    <img src="./slider4-2.png" alt="" className="img-fluid" />
+                                    <img src="./img/slider/slider4-2.png" alt="hinh1" className="img-fluid" />
                                     <div className="slider_content color_two">
                                         <h5>Samsung Brands<br /> Trend</h5>
                                         <h2>Bestseller <br /> Washing Machines</h2>
@@ -49,7 +48,7 @@ const SliderSection = () => {
                     </Col>
                 </Row>
             </Container>
-        </div>
+        </SliderSectionCSS>
     )
 }
 
