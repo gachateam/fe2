@@ -38,4 +38,67 @@ export const CustomSlickStyle = styled.div`
     .slick-dots li button::before{
         display: none;
     }
+
+    .slick-arrow{
+        top: -15px;
+        border: 0px;
+        color: #a8a8a8;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 99;
+        transition: 0.3s;
+    }
+
+    .slick-arrow:hover{
+        color: #408ed4;
+    }
+
+    .slick-prev{
+        position: absolute;
+        right: 14px;
+        background: #FFFFFF;
+        padding-right: 5px;
+    }
+
+    .slick-next{
+        position: absolute;
+        right: 0px;
+        background: #FFFFFF;
+        padding-left: 5px;
+    }
+
+    .product-caption{
+        padding: 17px 14px 20px 14px;
+        background: #FFFFFF;
+        position: relative;
+    }
+
+    .product-caption .product-name a {
+        line-height: 22px;
+        display: block;
+        overflow: hidden;
+        color: #3c74b9;
+        font-size: 14px;
+        margin-bottom: 5px;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        font-weight: 700;
+    }
+    .rating {
+        margin-bottom: 4px;
+    }
+
+    .price-box .regular-price {
+        font-size: 14px;
+        font-weight: 900;
+        color: #e12e2e;
+        margin-right: 5px;
+    }
+
+    .price-box .old-price {
+        font-size: 14px;
+        font-weight: 600;
+        color: #acacac;
+    }
 `
