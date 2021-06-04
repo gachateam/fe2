@@ -18,7 +18,7 @@ export default function App() {
         <Header />
         <SliderSection/>
         {/* <CustomSlick/> */}
-        {/* <Home1/> */}
+        <Home1/>
         <Footer />
         {/* <div style={{ display: 'flex', justifyContent: 'center' }}>
           <h1><Link to="/test">test</Link></h1>

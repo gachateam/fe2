@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const CustomSlickStyle = styled.div`
+
     .slick-dots {
         position: absolute;
         bottom: 20px;
