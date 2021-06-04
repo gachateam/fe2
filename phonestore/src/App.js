@@ -8,6 +8,7 @@ import { Route, Router, BrowserRouter, Switch, Link } from 'react-router-dom';
 import React from 'react';
 import 'slick-carousel/slick/slick'
 import CustomSlick from './component/CustomSlick';
+import SliderSection from './component/SliderSection';
 // import Home1 from './component/home1';
 
 
@@ -16,8 +17,9 @@ export default function App() {
     <BrowserRouter>
       <Route>
         <Header />
-        <CustomSlick/>
-        <Home1/>
+        <SliderSection/>
+        {/* <CustomSlick/> */}
+        {/* <Home1/> */}
         <Footer />
         {/* <div style={{ display: 'flex', justifyContent: 'center' }}>
           <h1><Link to="/test">test</Link></h1>
