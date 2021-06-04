@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const ProductListSliderBar = styled.div`
     .slick-arrow {
-        top: -36px;
+        top: -26px;
     }
     .yellow{
         color: yellow;
@@ -35,6 +35,11 @@ export const ProductListSliderBar = styled.div`
         top: 0px;
         left: 0px;
         opacity: 1;
+    }
+    @media only screen and (max-width: 991px) {
+        float: left;
+        width: 56%;
+        margin-left: 0px;
     }
 `
 
