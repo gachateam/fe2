@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import CustomSlick from '../CustomSlick';
 import { Link } from 'react-router-dom'
 import { SliderSectionC } from './SliderSectionElement'
+import { BannerArea } from '../Home1/home1Element'
 
 const SliderSection = () => {
     var settings = {
@@ -28,7 +29,7 @@ const SliderSection = () => {
                                     <div className="pt-des">
                                         <p><span>25%</span>Starting at <span>$340.00</span></p>
                                     </div>
-                                    <Link href="shop.html">Shop Now</Link>
+                                    <Link to="shop.html">Shop Now</Link>
                                 </div>
                             </div>
 
@@ -40,36 +41,36 @@ const SliderSection = () => {
                                     <div className="pt-des">
                                         <p><span>35%</span>Starting at <span>$120.00</span></p>
                                     </div>
-                                    <Link href="shop.html">Shop Now</Link>
+                                    <Link to="shop.html">Shop Now</Link>
                                 </div>
 
                             </div>
                         </CustomSlick>
                     </Col>
                     <Col md={12} lg={3}>
-                    <div class="right-side-banner text-center row">
-                        <div class="col-lg-12 col-md-4">
-                            <div class="banner-area">
-                                <div class="single-banner banner-top">
-                                    <a href="#"><img src="img/banner/banner-right-1.png" alt="" class="img-fluid"/></a>
+                    <Row className="right-side-banner text-center">
+                        <Col md={4} lg={12}>
+                            <BannerArea className="banner-area" style={{width: "100%"}}>
+                                <div className="single-banner banner-top">
+                                    <Link to="#"><img src="img/banner/banner-right-1.png" alt="" className="img-fluid"/></Link>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-4">
-                            <div class="banner-area mt-20">
-                                <div class="single-banner">
-                                    <a href="#"><img src="img/banner/banner-right-2.png" alt="" class="img-fluid"/></a>
+                            </BannerArea>
+                        </Col>
+                        <Col md={4} lg={12}>
+                            <BannerArea className="banner-area mt-20" style={{width: "100%"}}>
+                                <div className="single-banner" style={{marginTop: "20px"}}>
+                                    <Link to="#"><img src="img/banner/banner-right-2.png" alt="" className="img-fluid"/></Link>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-4">
-                            <div class="banner-area mt-20">
-                                <div class="single-banner">
-                                    <a href="#"><img src="img/banner/banner-right-3.png" alt="" class="img-fluid"/></a>
+                            </BannerArea>
+                        </Col>
+                        <Col md={4} lg={12}>
+                            <BannerArea className="banner-area mt-20" style={{width: "100%"}}>
+                                <div className="single-banner" style={{marginTop: "20px"}}>
+                                    <Link to="#"><img src="img/banner/banner-right-3.png" alt="" className="img-fluid"/></Link>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+                            </BannerArea>
+                        </Col>
+                    </Row>
                     </Col>
                 </Row>
             </Container>

@@ -3,7 +3,10 @@ import styled from "styled-components";
 export const SliderSectionC = styled.div`
   .slick-slider {
     margin-top: 30px;
-    /* width: 870px; */
+  }
+
+  .slick-slider img {
+    width: 100%;
   }
 
   .slick-slider .slick-dots {
@@ -11,7 +14,7 @@ export const SliderSectionC = styled.div`
     @media only screen and (max-width: 479px) {
       left: 50%;
       bottom: 5px;
-  }
+    }
   }
 
   .single-slider {
@@ -206,10 +209,20 @@ export const SliderSectionC = styled.div`
     }
   }
 
-  @media only screen and (max-width: 479px) {
-    .slick-dots {
-      left: 50%;
-      bottom: 5px;
+  .banner-top {
+    margin-top: 30px;
+
+    @media only screen and (max-width: 991px) {
+      margin-top: 20px;
     }
+  }
+
+  .right-side-banner .banner-area .single-banner a {
+    display: block;
+    width: 100%;
+  }
+
+  .right-side-banner .banner-area .single-banner a img {
+    width: 100%;
   }
 `;
