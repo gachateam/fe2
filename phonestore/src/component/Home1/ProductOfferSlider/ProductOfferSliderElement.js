@@ -40,6 +40,15 @@ export const ProductOfferSliderCSS = styled.div`
                 font-size: 11px;
                 font-weight: 700;
             }
+
+            @media only screen and (max-width: 767px), 
+            only screen and (max-width: 575px), 
+            only screen and (max-width: 479px) {
+                width: 100%;
+                max-width: 300px;
+                float: none;
+                margin: 0 auto;
+            }
         }
 
         .product-caption {
@@ -49,6 +58,13 @@ export const ProductOfferSliderCSS = styled.div`
 
             .product-name a h6{
                 color: #3c74b9;
+            }
+
+            @media only screen and (max-width: 767px),
+                    only screen and (max-width: 575px),
+                    only screen and (max-width: 479px) {
+                float: none;
+                width: 100%;
             }
         }
     }
