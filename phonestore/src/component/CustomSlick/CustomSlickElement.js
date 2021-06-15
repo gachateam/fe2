@@ -41,7 +41,7 @@ export const CustomSlickStyle = styled.div`
     }
 
     .slick-arrow{
-        top: -15px;
+        top: -28px;
         border: 0px;
         color: #a8a8a8;
         font-size: 24px;
@@ -102,4 +102,49 @@ export const CustomSlickStyle = styled.div`
         font-weight: 600;
         color: #acacac;
     }
+    .yellow{
+        color: yellow;
+    }
+    .default-star{
+        color:#a8a8a8;
+    }
+
+    .product-thumb {
+        display: block;
+        position: relative;
+        padding-bottom: 10px;
+        text-align: center;
+
+        .label-product-discount {
+            position: absolute;
+            top: 9px !important;
+            right: 9px;
+            display: inline-block;
+            background: #e12e2e;
+            color: #FFFFFF;
+            border-radius: 100% 100% 100% 0%;
+            text-align: center;
+            line-height: 32px;
+            height: 32px;
+            width: 32px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+        .label-product-new{
+            position: absolute;
+            top: 9px !important;
+            left: 9px;
+            display: inline-block;
+            background: #408ed4;
+            color: #FFFFFF;
+            border-radius: 100% 100% 100% 0%;
+            text-align: center;
+            line-height: 32px;
+            height: 32px;
+            width: 32px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+    }
+
 `

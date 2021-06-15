@@ -89,7 +89,7 @@ export class Language extends React.Component {
                     as={CustomToggle}
                     id="dropdown-custom-components"
                 >
-                    <ImageLanguage src="../../img/imgLanguage/1.jpg" />
+                    <ImageLanguage src="../../img/imgLanguage/1.jpg" alt="hinh1" />
                     <span>{this.state.dropDownValue}</span>
                 </Dropdown.Toggle>
 
@@ -216,7 +216,7 @@ export class DropdownAnimation extends React.Component {
                     as={CustomToggle}
                     id="dropdown-custom-components"
                 >
-                    <ImageLanguage src="../../img/imgLanguage/1.jpg" />
+                    <ImageLanguage src="../../img/imgLanguage/1.jpg" alt="hinh1"/>
                     <span>{this.state.dropDownValue}</span>
                 </Dropdown.Toggle>
 

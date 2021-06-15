@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SliderSectionC = styled.div`
+export const SliderSectionCSS = styled.div`
   .slick-slider {
     margin-top: 30px;
   }

@@ -1,15 +1,6 @@
 import styled from 'styled-components'
 
 export const ProductListSliderBar = styled.div`
-    .slick-arrow {
-        top: -26px;
-    }
-    .yellow{
-        color: yellow;
-    }
-    .default-star{
-        color:#a8a8a8;
-    }
     .product-list-content .product-caption{
         width: 59%;
         display: block;
@@ -40,6 +31,11 @@ export const ProductListSliderBar = styled.div`
         float: left;
         width: 56%;
         margin-left: 0px;
+    }
+    @media only screen and (max-width: 767px) {
+        float: none;
+        width: 100%;
+        margin-right: 0px;
     }
 `
 

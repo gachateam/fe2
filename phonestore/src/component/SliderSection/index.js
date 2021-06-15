@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import CustomSlick from '../CustomSlick';
 import { Link } from 'react-router-dom'
-import { SliderSectionC } from './SliderSectionElement'
+import { SliderSectionCSS } from './SliderSectionElement'
 import { BannerArea } from '../Home1/home1Element'
 
 const SliderSection = () => {
@@ -12,34 +12,38 @@ const SliderSection = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows:false,
-        // variableWidth: true
+        arrows: false
     };
     return (
-        <SliderSectionC className="slider_section">
+        <SliderSectionCSS className="slider_section">
             <Container>
                 <Row>
                     <Col md={12} lg={9}>
                         <CustomSlick settings={settings}>
-                            <div className="single-slider">
-                                <img src="./slider4-1.png" alt="" className="img-fluid" />
-                                <div className="slider_content">
-                                    <h5>The Xbox One S <br /> Trend</h5>
-                                    <h2>Weeky <br /> Deals! Outlet</h2>
-                                    <div className="pt-des">
-                                        <p><span>25%</span>Starting at <span>$340.00</span></p>
+                            <div>
+                                <div className="single_slider slick-slide">
+                                    <img src="./img/slider/slider4-1.png" alt="hinh1" className="img-fluid" />
+                                    <div className="slider_content color_two">
+                                        <h5>The Xbox One S <br /> Trend</h5>
+                                        <h2>Weeky <br /> Deals! Outlet</h2>
+                                        <div className="pt-des">
+                                            <p><span>25%</span>Starting at <span>$340.00</span></p>
+                                        </div>
+                                        <a href="shop.html">Shop Now</a>
                                     </div>
                                     <Link to="shop.html">Shop Now</Link>
                                 </div>
                             </div>
-
-                            <div className="single-slider">
-                                <img src="./slider4-2.png" alt="" className="img-fluid" />
-                                <div className="slider_content">
-                                    <h5>Samsung Brands<br /> Trend</h5>
-                                    <h2>Bestseller <br /> Washing Machines</h2>
-                                    <div className="pt-des">
-                                        <p><span>35%</span>Starting at <span>$120.00</span></p>
+                            <div>
+                                <div className="single_slider slick-slide">
+                                    <img src="./img/slider/slider4-2.png" alt="hinh1" className="img-fluid" />
+                                    <div className="slider_content color_two">
+                                        <h5>Samsung Brands<br /> Trend</h5>
+                                        <h2>Bestseller <br /> Washing Machines</h2>
+                                        <div className="pt-des">
+                                            <p><span>35%</span>Starting at <span>$120.00</span></p>
+                                        </div>
+                                        <a href="shop.html">Shop Now</a>
                                     </div>
                                     <Link to="shop.html">Shop Now</Link>
                                 </div>
@@ -74,7 +78,7 @@ const SliderSection = () => {
                     </Col>
                 </Row>
             </Container>
-        </SliderSectionC>
+        </SliderSectionCSS>
     )
 }
 
