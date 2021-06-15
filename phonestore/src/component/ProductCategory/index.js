@@ -18,7 +18,6 @@ const ProductCategory = () => {
 
     var settings = {
         dots: false,
-        arrows: false,
         slidesToShow: 5,
         infinite: true,
         arrows: false,
