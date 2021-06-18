@@ -180,3 +180,8 @@ ul {
     display: none;
   }
 }
+
+.breadcrumb {
+  padding: 25px 0;
+  background: #f8f8f8;
+}

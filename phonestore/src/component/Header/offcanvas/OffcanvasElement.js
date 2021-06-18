@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const OffcanvasStyle = styled.div`
+export const OffCanvasStyle = styled.div`
     position: absolute;
     right: 60px;
     top: 173px;

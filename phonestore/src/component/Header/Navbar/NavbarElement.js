@@ -18,7 +18,7 @@ export const HeaderMiddleInner = styled.div`
     }
 `
 
-export const HearderMiddleItem = styled.li`
+export const HeaderMiddleItem = styled.li`
     display: inline-block;
     position: relative;
 `

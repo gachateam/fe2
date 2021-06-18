@@ -1,5 +1,5 @@
 import React from 'react'
-import { OffcanvasStyle } from './OffcanvasElement'
+import { OffCanvasStyle } from './OffCanvasElement'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import 'bootstrap/js/dist/offcanvas'
 import { Link } from 'react-router-dom'
@@ -12,9 +12,9 @@ import {
 } from '../Dropdown';
 import { ImYoutube2 } from 'react-icons/im'
 
-const Offcanvas = () => {
+const OffCanvas = () => {
     return (
-        <OffcanvasStyle className="canvas-open">
+        <OffCanvasStyle className="canvas-open">
             <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                 <GiHamburgerMenu />
             </button>
@@ -89,8 +89,8 @@ const Offcanvas = () => {
                     </div>
                 </div>
             </div>
-        </OffcanvasStyle>
+        </OffCanvasStyle>
     )
 }
 
-export default Offcanvas
+export default OffCanvas

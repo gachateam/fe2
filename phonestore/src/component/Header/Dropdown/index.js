@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Dropdown } from 'react-bootstrap';
 import { HeaderTopRightLink } from '../HeaderElement'
 import { ImageLanguage, HeaderAngleDown, HeaderBoxDropdown, HeaderBoxDropdownLink } from './DropdownElement';
+import { useAuth } from '../../../contexts/AuthContext'
+import { useHistory } from 'react-router-dom'
 
 const CustomToggle = React.forwardRef(({ children, onClick, to }, ref) => (
     <HeaderTopRightLink
@@ -44,7 +46,6 @@ const CustomItem = React.forwardRef(({ children, onClick, to }, ref) => {
                 to={to}
                 ref={ref}
                 onClick={(e) => {
-                    e.preventDefault();
                     onClick(e);
                 }}
             >
@@ -107,7 +108,7 @@ export class Language extends React.Component {
                         </Dropdown.Item>
                     ))}
                 </Dropdown.Menu>
-            </Dropdown >
+            </Dropdown>
         );
     }
 }
@@ -155,39 +156,67 @@ export class USD extends React.Component {
     }
 }
 
-export class MyAccount extends React.Component {
-    setting = {
-        setting: ["My Account", "Checkout", "Sign In"]
-    }
-    render() {
-        return (
-            <Dropdown as={CustomDropdown}>
-                <Dropdown.Toggle
-                    to="/"
-                    as={CustomToggle}
-                    id="dropdown-custom-components"
-                >
-                    <span>My Account</span>
-                </Dropdown.Toggle>
+export const MyAccount = () => {
 
-                <Dropdown.Menu as={CustomMenu} >
-                    {
-                        this.setting.setting.map((data, index) => (
-                            <Dropdown.Item
-                                to="/tien"
-                                key={index}
-                                as={CustomItem}
-                                title={data}
-                                eventKey={index}
-                            >
-                                {data}
-                            </Dropdown.Item>
-                        ))
-                    }
-                </Dropdown.Menu>
-            </Dropdown>
-        );
+    const { currentUser, logout } = useAuth()
+    const history = useHistory()
+
+    const setting = {
+        setting: [{
+            link: "/",
+            title: currentUser ? currentUser.email : "My Account"
+        }, {
+            link: "/checkout",
+            title: "Checkout"
+        }, {
+            link: currentUser ? "" : "/login",
+            title: currentUser ? "logout" : "login"
+        }]
     }
+
+    const handleLogout = async (e) => {
+        if (!currentUser) {
+            return;
+        }
+
+        e.preventDefault()
+
+
+        try {
+            logout()
+            history.push('/login')
+        } catch (error) {
+        }
+    }
+
+    return (
+        <Dropdown as={CustomDropdown}>
+            <Dropdown.Toggle
+                to="/"
+                as={CustomToggle}
+                id="dropdown-custom-components"
+            >
+                <span>{currentUser ? currentUser.email : "My Account"}</span>
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu as={CustomMenu} >
+                {
+                    setting.setting.map((data, index) => (
+                        <Dropdown.Item
+                            onClick={handleLogout}
+                            to={data.link}
+                            key={index}
+                            as={CustomItem}
+                            title={data.title}
+                            eventKey={index}
+                        >
+                            {data.title}
+                        </Dropdown.Item>
+                    ))
+                }
+            </Dropdown.Menu>
+        </Dropdown>
+    );
 }
 
 //custom animation
@@ -216,7 +245,7 @@ export class DropdownAnimation extends React.Component {
                     as={CustomToggle}
                     id="dropdown-custom-components"
                 >
-                    <ImageLanguage src="../../img/imgLanguage/1.jpg" alt="hinh1"/>
+                    <ImageLanguage src="../../img/imgLanguage/1.jpg" alt="hinh1" />
                     <span>{this.state.dropDownValue}</span>
                 </Dropdown.Toggle>
 
@@ -236,7 +265,7 @@ export class DropdownAnimation extends React.Component {
                         </Dropdown.Item>
                     ))}
                 </Dropdown.Menu>
-            </Dropdown >
+            </Dropdown>
         );
     }
 }

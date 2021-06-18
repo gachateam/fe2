@@ -24,7 +24,7 @@ import {
     HeaderMiddleInner,
     HeaderMiddleLink,
     HeaderMiddleList,
-    HearderMiddleItem
+    HeaderMiddleItem
 } from './NavbarElement'
 import './index.css'
 
@@ -119,11 +119,11 @@ export class NavbarCustom extends React.Component {
         <HeaderMiddleList className="list-100">
             {
                 this.category.map((e) => (
-                    <HearderMiddleItem key={e}>
+                    <HeaderMiddleItem key={e}>
                         <HeaderMiddleLink to="/">
                             {e}
                         </HeaderMiddleLink>
-                    </HearderMiddleItem>
+                    </HeaderMiddleItem>
                 ))
             }
         </HeaderMiddleList>
