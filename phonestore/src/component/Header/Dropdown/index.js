@@ -163,7 +163,7 @@ export const MyAccount = () => {
 
     const setting = {
         setting: [{
-            link: "/",
+            link: "/my-account",
             title: currentUser ? currentUser.email : "My Account"
         }, {
             link: "/checkout",

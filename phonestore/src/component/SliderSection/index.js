@@ -21,7 +21,7 @@ const SliderSection = () => {
                     <Col md={12} lg={9}>
                         <CustomSlick settings={settings}>
                             <div>
-                                <div className="single-slider slick-slide">
+                                <div className="single-slider slick-slide w-100">
                                     <img src="./img/slider/slider4-1.png" alt="hinh1" className="img-fluid" />
                                     <div className="slider-content color_two">
                                         <h5>The Xbox One S <br /> Trend</h5>
@@ -34,7 +34,7 @@ const SliderSection = () => {
                                 </div>
                             </div>
                             <div>
-                                <div className="single-slider slick-slide">
+                                <div className="single-slider slick-slide w-100">
                                     <img src="./img/slider/slider4-2.png" alt="hinh1" className="img-fluid" />
                                     <div className="slider-content color_two">
                                         <h5>Samsung Brands<br /> Trend</h5>
@@ -49,29 +49,29 @@ const SliderSection = () => {
                         </CustomSlick>
                     </Col>
                     <Col md={12} lg={3}>
-                    <Row className="right-side-banner text-center">
-                        <Col md={4} lg={12}>
-                            <BannerArea className="banner-area" style={{width: "100%"}}>
-                                <div className="single-banner banner-top">
-                                    <Link to="#"><img src="img/banner/banner-right-1.png" alt="" className="img-fluid"/></Link>
-                                </div>
-                            </BannerArea>
-                        </Col>
-                        <Col md={4} lg={12}>
-                            <BannerArea className="banner-area mt-20" style={{width: "100%"}}>
-                                <div className="single-banner" style={{marginTop: "20px"}}>
-                                    <Link to="#"><img src="img/banner/banner-right-2.png" alt="" className="img-fluid"/></Link>
-                                </div>
-                            </BannerArea>
-                        </Col>
-                        <Col md={4} lg={12}>
-                            <BannerArea className="banner-area mt-20" style={{width: "100%"}}>
-                                <div className="single-banner" style={{marginTop: "20px"}}>
-                                    <Link to="#"><img src="img/banner/banner-right-3.png" alt="" className="img-fluid"/></Link>
-                                </div>
-                            </BannerArea>
-                        </Col>
-                    </Row>
+                        <Row className="right-side-banner text-center">
+                            <Col md={4} lg={12}>
+                                <BannerArea className="banner-area" style={{ width: "100%" }}>
+                                    <div className="single-banner banner-top">
+                                        <Link to="#"><img src="img/banner/banner-right-1.png" alt="" className="img-fluid" /></Link>
+                                    </div>
+                                </BannerArea>
+                            </Col>
+                            <Col md={4} lg={12}>
+                                <BannerArea className="banner-area mt-20" style={{ width: "100%" }}>
+                                    <div className="single-banner" style={{ marginTop: "20px" }}>
+                                        <Link to="#"><img src="img/banner/banner-right-2.png" alt="" className="img-fluid" /></Link>
+                                    </div>
+                                </BannerArea>
+                            </Col>
+                            <Col md={4} lg={12}>
+                                <BannerArea className="banner-area mt-20" style={{ width: "100%" }}>
+                                    <div className="single-banner" style={{ marginTop: "20px" }}>
+                                        <Link to="#"><img src="img/banner/banner-right-3.png" alt="" className="img-fluid" /></Link>
+                                    </div>
+                                </BannerArea>
+                            </Col>
+                        </Row>
                     </Col>
                 </Row>
             </Container>

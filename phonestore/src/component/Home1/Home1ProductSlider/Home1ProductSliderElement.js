@@ -39,6 +39,9 @@ export const Home1ProductSliderCSS = styled.div`
         height: 36px;
         width: 36px;
         line-height: 36px;
+        &:hover{
+            transform: rotate(360deg);
+        }
     }
     .item-product:hover .action-link {
         opacity: 1;
@@ -58,8 +61,6 @@ export const Cart = styled.div`
         height: 40px;
         width: 40px;
         text-align: center;
-        -webkit-transition: 0.3s;
-        -o-transition: 0.3s;
         transition: 0.3s;
         display: flex;
         align-items: center;
@@ -78,6 +79,9 @@ export const Cart = styled.div`
     &:hover a {
         background: #408ed4;
         transition: 0.3s;
+        &:hover{
+            transform: rotate(-360deg);
+        }
     }
     
 

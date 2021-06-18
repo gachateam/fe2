@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { Col, Container, Form, Row, Button, Alert } from 'react-bootstrap'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
-import { Link ,useHistory } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
 import { LoginCSS } from './LoginElement'
 
@@ -14,6 +14,7 @@ const Login = () => {
     const [error, setError] = useState()
     const [loading, setLoading] = useState(false)
     const history = useHistory()
+    const [checkedRememberMe, setCheckedRememberMe] = useState(false)
 
     const handleSubmit = async e => {
         e.preventDefault()
@@ -21,11 +22,11 @@ const Login = () => {
         try {
             setError("");
             setLoading(true)
-            await login(emailRef.current.value, passRef.current.value)
+            await login(emailRef.current.value, passRef.current.value, checkedRememberMe)
             history.push("/")
-        } catch {
+        } catch (err) {
             setLoading(false)
-            return setError("Failed to login")
+            return setError(err.message)
         }
         setLoading(false);
     }
@@ -65,10 +66,7 @@ const Login = () => {
                                             <Button className="login-register" disabled={loading} type="submit">Login</Button>
                                         </Form.Group>
                                         <Form.Group className="group_3 col-lg-9">
-                                            <label htmlFor="remember_box">
-                                                <input id="remember_box" type="checkbox" />
-                                                <span> Remember me </span>
-                                            </label>
+                                            <Form.Check id="remember_box" type="checkbox" label="Remember me" onChange={() => setCheckedRememberMe(!checkedRememberMe)} />
                                         </Form.Group>
                                         <div className="col-lg-12 text-left">
                                             <Link className="lost-password" to="/">Lost your password?</Link>

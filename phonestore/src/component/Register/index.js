@@ -38,9 +38,9 @@ const Register = () => {
             setLoading(true)
             await signup(emailRef.current.value, passRef.current.value)
             history.push("/")
-        } catch {
+        } catch(err) {
             setLoading(false)
-            return setError("Failed to create account")
+            return setError(err.message)
         }
         setLoading(false);
     }
