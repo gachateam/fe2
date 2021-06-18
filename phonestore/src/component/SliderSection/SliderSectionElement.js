@@ -17,7 +17,7 @@ export const SliderSectionCSS = styled.div`
     }
   }
 
-  .single-slider {
+  .single_slider {
     position: relative;
   }
 

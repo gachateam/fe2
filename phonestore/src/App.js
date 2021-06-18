@@ -6,9 +6,11 @@ import NotFound from './component/NotFound';
 import ProductCategory from './component/ProductCategory';
 // import { Test, Test2 } from './component/Test';
 // eslint-disable-next-line
-import { Route, Router, BrowserRouter, Switch, Link, browserHistory } from 'react-router-dom';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import React from 'react';
 import SliderSection from './component/SliderSection';
+import BrandLogo from './component/BrandLogo';
+import LastestPost from './component/LastestPost';
 
 
 export default function App() {
@@ -20,6 +22,8 @@ export default function App() {
           <SliderSection />
           <Home1 />
           <ProductCategory/>
+          <BrandLogo/>
+          <LastestPost/>
         </Route>
         <Route component={NotFound} />
       </Switch>
