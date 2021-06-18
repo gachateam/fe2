@@ -1,4 +1,3 @@
-// import logo from '../public/img/1.png';
 import Header from './component/Header';
 import Footer from './component/Footer';
 import Home1 from './component/Home1';

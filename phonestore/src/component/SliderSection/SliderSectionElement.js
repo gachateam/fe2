@@ -21,7 +21,7 @@ export const SliderSectionCSS = styled.div`
     position: relative;
   }
 
-  .slider_content {
+  .slider-content {
     position: absolute;
     top: calc(50% - 170px);
     left: 12%;
@@ -50,7 +50,7 @@ export const SliderSectionCSS = styled.div`
     animation: bounceInLeft 1s;
   }
 
-  .slider_content h5 {
+  .slider-content h5 {
     color: #2d75b5;
     font-size: 20px;
     font-weight: 600;
@@ -77,7 +77,7 @@ export const SliderSectionCSS = styled.div`
     }
   }
 
-  .slider_content h2 {
+  .slider-content h2 {
     font-size: 48px;
     line-height: 50px;
     font-weight: 600;
@@ -159,7 +159,7 @@ export const SliderSectionCSS = styled.div`
     animation: bounceInLeft 1.5s;
   }
 
-  .slider_content a {
+  .slider-content a {
     background: #2d75b5;
     color: #ffffff;
     font-size: 12px;
