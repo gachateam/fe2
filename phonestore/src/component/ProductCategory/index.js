@@ -6,8 +6,6 @@ import { ProductCategoryCSS } from './ProductCategoryElement'
 
 var data = require('./data.json')
 
-console.log(data.category)
-
 const ProductCategory = () => {
     const NavItem = (props) => (
         <>

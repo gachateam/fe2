@@ -175,15 +175,10 @@ export const MyAccount = () => {
     }
 
     const handleLogout = async (e) => {
-        if (!currentUser) {
-            return;
-        }
-
         e.preventDefault()
 
-
         try {
-            logout()
+            await logout()
             history.push('/login')
         } catch (error) {
         }
@@ -203,7 +198,7 @@ export const MyAccount = () => {
                 {
                     setting.setting.map((data, index) => (
                         <Dropdown.Item
-                            onClick={handleLogout}
+                            onClick={data.link===""&&handleLogout}
                             to={data.link}
                             key={index}
                             as={CustomItem}

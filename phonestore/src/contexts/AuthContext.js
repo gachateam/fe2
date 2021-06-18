@@ -30,7 +30,7 @@ const AuthProvider = ({ children }) => {
             setLoading(false)
         })
         return unSubscriber
-    }, [])
+    }, [])// eslint-disable-line react-hooks/exhaustive-deps
 
     const value = {
         currentUser,
@@ -38,8 +38,6 @@ const AuthProvider = ({ children }) => {
         login,
         logout
     }
-
-
 
     return (
         <AuthContext.Provider value={value}>
