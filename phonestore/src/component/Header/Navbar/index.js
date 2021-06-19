@@ -97,14 +97,14 @@ export class NavbarCustom extends React.Component {
             },
             product: [
                 {
-                    img: "../../img/product/ear-headphones.jpg",
+                    img: "../../img/product/product-1.jpg",
                     count: "1",
                     name: "SonicFuel Wireless Over-Ear Headphones",
                     size: "Size:  S",
                     price: 32.30
                 },
                 {
-                    img: "../../img/product/720-degree-cameras-dual.jpg",
+                    img: "../../img/product/product-2.jpg",
                     count: "1",
                     name: "720 Degree Panoramic HD 360.. ",
                     size: "Dimension:  40cm X 60cm",
@@ -152,7 +152,7 @@ export class NavbarCustom extends React.Component {
                         this.state.product.map((product, index) => (
                             <Dropdown.Item as={CustomItem} key={index}>
                                 <BlockcardInnerCartImg>
-                                    <BlockcardInnerCartImgImage src={product.img} className="img-fluid" />
+                                    <BlockcardInnerCartImgImage src={product.img} className="img-fluid" style={{width: "30%"}} />
                                     <BlockcardInnerCartImgSpan>{product.count}x</BlockcardInnerCartImgSpan>
                                 </BlockcardInnerCartImg>
                                 <div>

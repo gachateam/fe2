@@ -11,12 +11,14 @@ import React from 'react';
 import SliderSection from './component/SliderSection';
 import Login from './component/Login';
 import AuthProvider from './contexts/AuthContext';
+// import Test from './component/Test';
 
 
 export default function App() {
   return (
     <BrowserRouter>
       <AuthProvider>
+        {/* <Test /> */}
         <Header />
         <Switch>
           <Route exact path="/" >

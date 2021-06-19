@@ -1,4 +1,4 @@
-import React from 'react'
+// import React, { useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import Home1SliderBar from './Home1SliderBar'
 // import Slider from "react-slick";
@@ -10,6 +10,7 @@ import Home1ProductSlider from './Home1ProductSlider'
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 import { Home1ProductSliderCSS } from './Home1ProductSlider/Home1ProductSliderElement'
 import { BlockTitle } from './Home1SliderBar/Home1SliderBarElement'
+// import { firebase } from '../Firebase'
 
 var data = require('./Home1ProductSlider/data.json')
 
@@ -75,6 +76,23 @@ const Home1 = () => {
             }
         }]
     };
+
+    // const [product, setProduct] = useState()
+
+    // const getData = async () => {
+    //     firebase.database().ref('/games').once('value').then((snapshot) => {
+    //         console.log(snapshot.val());
+    //     });
+    // }
+    
+    // firestore.collection('product').get().then(querySnapshot => {
+    //     let product = [];
+    //     querySnapshot.forEach((documentQuerySnapshot) => {
+    //         product.push(documentQuerySnapshot.data())
+    //     })
+    //     setProduct(product)
+    // })
+
     return (
         <Home1Styled className="home3-product home4-product-area">
             <Container>
@@ -123,10 +141,10 @@ const Home1 = () => {
 
                         <Home1ProductSliderCSS className="mx-4">
                             <BlockTitle>
-                                <h6>{data.title}</h6>
+                                <h6>Bestseller Products</h6>
                             </BlockTitle>
                             <Home1ProductSlider data={data} settings={settings} />
-                        </Home1ProductSliderCSS >
+                        </Home1ProductSliderCSS>
                         <BannerArea className="banner-area d-flex justify-content-center align-content-center">
                             <div className="single-banner mt-5">
                                 <Link to="/"><img src="./img/banner/banner2-4.png" alt="banner" className="img-fluid" /></Link>
@@ -135,7 +153,7 @@ const Home1 = () => {
                     </Col>
                 </Row>
             </Container>
-        </Home1Styled >
+        </Home1Styled>
     )
 }
 

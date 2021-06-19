@@ -1,5 +1,6 @@
-import React from 'react'
+// import React, { useState } from 'react'
 import { Col, Container, Row, Tab, Tabs } from 'react-bootstrap'
+// import { firebase } from '../Firebase'
 import Home1ProductSlider from '../Home1/Home1ProductSlider'
 import { Home1ProductSliderCSS } from '../Home1/Home1ProductSlider/Home1ProductSliderElement'
 import { ProductCategoryCSS } from './ProductCategoryElement'
@@ -13,6 +14,19 @@ const ProductCategory = () => {
             <span>{props.name}</span>
         </>
     )
+
+    // const [product, setProduct] = useState()
+
+    // const gotData = async (data) => {
+    //     setProduct(data.val());
+    // }
+    // const errData = (err) => {
+    //     console.log(err);
+    // }
+
+    // let ref = firebase.database().ref('/category')
+    // ref.on("value", gotData, errData)
+  
 
     var settings = {
         dots: false,
