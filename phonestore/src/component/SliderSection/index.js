@@ -21,9 +21,9 @@ const SliderSection = () => {
                     <Col md={12} lg={9}>
                         <CustomSlick settings={settings}>
                             <div>
-                                <div className="single-slider slick-slide w-100">
-                                    <img src="./img/slider/slider4-1.png" alt="hinh1" className="img-fluid" />
-                                    <div className="slider-content color_two">
+                                <div className="single-slider slick-slide" style={{width: "100%"}}>
+                                    <img src="./img/slider/slider4-1.png" alt="hinh1" className="img-fluid" style={{width: "100%"}}/>
+                                    <div className="slider-content color-two">
                                         <h5>The Xbox One S <br /> Trend</h5>
                                         <h2>Weeky <br /> Deals! Outlet</h2>
                                         <div className="pt-des">
@@ -34,9 +34,9 @@ const SliderSection = () => {
                                 </div>
                             </div>
                             <div>
-                                <div className="single-slider slick-slide w-100">
-                                    <img src="./img/slider/slider4-2.png" alt="hinh1" className="img-fluid" />
-                                    <div className="slider-content color_two">
+                                <div className="single-slider slick-slide" style={{width: "100%"}}>
+                                    <img src="./img/slider/slider4-2.png" alt="hinh1" className="img-fluid" style={{width: "100%"}}/>
+                                    <div className="slider-content color-two">
                                         <h5>Samsung Brands<br /> Trend</h5>
                                         <h2>Bestseller <br /> Washing Machines</h2>
                                         <div className="pt-des">

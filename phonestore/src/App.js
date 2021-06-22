@@ -4,6 +4,8 @@ import Home1 from './component/Home1';
 import NotFound from './component/NotFound';
 import ProductCategory from './component/ProductCategory';
 import Register from './component/Register'
+import BrandLogo from './component/BrandLogo';
+import LastestPost from './component/LastestPost';
 // import { Test, Test2 } from './component/Test';
 // eslint-disable-next-line
 import { Route, Router, BrowserRouter, Switch, Link, browserHistory } from 'react-router-dom';
@@ -11,6 +13,10 @@ import React from 'react';
 import SliderSection from './component/SliderSection';
 import Login from './component/Login';
 import AuthProvider from './contexts/AuthContext';
+// import { Test, Test2 } from './component/Test';
+// eslint-disable-next-line
+
+
 
 
 export default function App() {
@@ -23,6 +29,8 @@ export default function App() {
             <SliderSection />
             <Home1 />
             <ProductCategory />
+            <BrandLogo />
+            <LastestPost />
           </Route>
           <Route exact path="/login" >
             <Login />

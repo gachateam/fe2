@@ -12,7 +12,7 @@ import {
 } from '../Dropdown';
 import { ImYoutube2 } from 'react-icons/im'
 
-const OffCanvas = () => {
+const Offcanvas = () => {
     return (
         <OffCanvasStyle className="canvas-open">
             <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
@@ -93,4 +93,4 @@ const OffCanvas = () => {
     )
 }
 
-export default OffCanvas
+export default Offcanvas
